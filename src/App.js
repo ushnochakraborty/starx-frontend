@@ -29,13 +29,15 @@ function App() {
         style={{ minHeight: '90vh' }}
       >
         <Grid container xs={12} rowSpacing={3} alignItems="center" justifyContent="center" height="50vh">
-          <Grid item xs={12}>
+          <Grid item xs={1} />
+          <Grid item xs={10}>
             <Typography variant="h3" align="center" padding="10px">Welcome to the STARx Survey Tool</Typography>
             <Typography variant="h3" align="center" padding="10px">Bienvenida a la STARx Encuesta</Typography>
           </Grid>
+          <Grid item xs={1} />
         </Grid>
         <Grid item xs={6} align="center">
-          <Card sx={{ minWidth: "75%", maxWidth: "75%", bgcolor: "background.secondary", boxShadow: 10}}>
+          <Card sx={{ minWidth: "75%", maxWidth: "75%", minHeight: "90%", maxHeight: "90%", bgcolor: "background.secondary", boxShadow: 10}}>
             <CardContent>
               <Typography variant="h5" align="center" paddingBottom="10px">English</Typography>
               <Typography a>Create a new account</Typography>
@@ -44,7 +46,7 @@ function App() {
           </Card>
         </Grid>
         <Grid item xs={6} align="center">
-          <Card sx={{ minWidth: "75%", maxWidth: "75%", bgcolor: "background.secondary", boxShadow: 10}}>
+          <Card sx={{ minWidth: "75%", maxWidth: "75%", minHeight: "90%", maxHeight: "90%", bgcolor: "background.secondary", boxShadow: 10}}>
             <CardContent>
               <Typography variant="h5" align="center" paddingBottom="10px">Español</Typography>
               <Typography a>Crea una cuenta nueva</Typography>
