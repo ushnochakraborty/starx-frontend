@@ -3,7 +3,7 @@ import { StylesManager, Model } from "survey-react";
 import { Survey } from "survey-react";
 import "survey-react";
 import "../index.css";
-import { json } from "../surveys/trxansition-parent";
+import { json } from "../surveys/starx-pediatric";
 
 StylesManager.applyTheme("defaultV2");
 
@@ -14,13 +14,7 @@ function sendDataToServer(survey) {
   alert("The results are: " + JSON.stringify(survey.data));
 }
 
-function TParent() {
-  return (
-    <div>
-      {" "}
-      <h1>TRxANSITION Parent Survey</h1>{" "}
-      <Survey model={survey} onComplete={sendDataToServer} />{" "}
-    </div>
-  );
+function SPediatric() {
+  return <Survey model={survey} onComplete={sendDataToServer} />;
 }
-export default TParent;
+export default SPediatric;

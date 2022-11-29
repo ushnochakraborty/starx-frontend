@@ -6,13 +6,21 @@ import "../index.css";
 import { json } from "../surveys/starx-parent";
 
 StylesManager.applyTheme("defaultV2");
-function SurveyComponent() {
-  const survey = new Model(json);
+
+var survey = new Model(json);
+
+function sendDataToServer(survey) {
+  //send Ajax request to your web server
+  alert("The results are: " + JSON.stringify(survey.data));
+}
+
+function SParent() {
   return (
     <div>
-      <h1>STARx Parent Survey</h1>
-      <Survey model={survey} />;
+      {" "}
+      <h1>STARx Parent Survey</h1>{" "}
+      <Survey model={survey} onComplete={sendDataToServer} />{" "}
     </div>
   );
 }
-export default SurveyComponent;
+export default SParent;
