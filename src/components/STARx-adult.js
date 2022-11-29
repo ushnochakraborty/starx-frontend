@@ -3,7 +3,7 @@ import { StylesManager, Model } from "survey-react";
 import { Survey } from "survey-react";
 import "survey-react";
 import "../index.css";
-import { json } from "../surveys/trxansition-adult.js";
+import { json } from "../surveys/starx-adult";
 
 StylesManager.applyTheme("defaultV2");
 
@@ -14,7 +14,7 @@ function sendDataToServer(survey) {
   alert("The results are: " + JSON.stringify(survey.data));
 }
 
-function TAdult() {
+function SAdult() {
   return <Survey model={survey} onComplete={sendDataToServer} />;
 }
-export default TAdult;
+export default SAdult;
