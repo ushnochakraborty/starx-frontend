@@ -1,6 +1,45 @@
 export const json = {
   elements: [
     {
+      type: "text",
+      inputType: "date",
+      name: "patient.dob",
+      title: "Please enter your date of birth",
+    },
+    {
+      type: "text",
+      inputType: "date",
+      name: "patient.dod",
+      title: "Please enter your date of diagnosis",
+    },
+    {
+      type: "dropdown",
+      choices: [
+        "American Indian or Alaskan Native",
+        "Asian",
+        "Black or African American",
+        "Hispanic or Latino",
+        "Native Hawaiian or Other Pacific Islander",
+        "White",
+        "Other",
+        "Prefer not to say",
+      ],
+      name: "patient.race",
+      title: "Please enter your race",
+    },
+    {
+      type: "dropdown",
+      name: "gender",
+      title: "What is your self identified gender?",
+      choices: ["Female", "Male", "Other", "Prefer not to say"],
+    },
+    {
+      type: "text",
+      inputType: "number",
+      name: "num.of.meds",
+      title: "How many medications do you take?",
+    },
+    {
       type: "matrix",
       name: "how often",
       title:
@@ -34,7 +73,8 @@ export const json = {
       rows: [
         {
           value: "understand doctor",
-          text: "How often did you make an effort to understand what your doctor told you?",
+          text:
+            "How often did you make an effort to understand what your doctor told you?",
         },
         {
           value: "take medicine",
@@ -42,7 +82,8 @@ export const json = {
         },
         {
           value: "ask questions",
-          text: "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
+          text:
+            "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
         },
         {
           value: "make appointments",
@@ -50,15 +91,18 @@ export const json = {
         },
         {
           value: "need someone to remind",
-          text: "How often did you need someone to remind you to take your medicines?",
+          text:
+            "How often did you need someone to remind you to take your medicines?",
         },
         {
           value: "personal reminders",
-          text: "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
+          text:
+            "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
         },
         {
           value: "internet research",
-          text: "How often did you use the internet, books or other guides to find out more about his/her illness?",
+          text:
+            "How often did you use the internet, books or other guides to find out more about his/her illness?",
         },
         {
           value: "forget medicine",
@@ -66,7 +110,8 @@ export const json = {
         },
         {
           value: "handle problems",
-          text: "How often did you work with your doctor to take care of new health problems that came up?",
+          text:
+            "How often did you work with your doctor to take care of new health problems that came up?",
         },
       ],
       alternateRows: true,
@@ -114,7 +159,8 @@ export const json = {
         },
         {
           value: "not taking medicine",
-          text: "How much do you know about what will happen if you do not take your medicine?",
+          text:
+            "How much do you know about what will happen if you do not take your medicine?",
         },
       ],
       alternateRows: true,
@@ -158,7 +204,8 @@ export const json = {
         },
         {
           value: "plan",
-          text: "How easy or hard is it for you to make a plan with your doctor to care for your health?",
+          text:
+            "How easy or hard is it for you to make a plan with your doctor to care for your health?",
         },
         {
           value: "see doctor alone",
@@ -166,7 +213,8 @@ export const json = {
         },
         {
           value: "take medicine",
-          text: "How easy or hard is it for you to take your medicines the way they are supposed ot be taken?",
+          text:
+            "How easy or hard is it for you to take your medicines the way they are supposed ot be taken?",
         },
         {
           value: "take care of yourself",
@@ -174,7 +222,8 @@ export const json = {
         },
         {
           value: "move to adult care",
-          text: "How easy or hard do you think it will be for you to move from pediatrics to adult-focused care?",
+          text:
+            "How easy or hard do you think it will be for you to move from pediatrics to adult-focused care?",
         },
       ],
     },

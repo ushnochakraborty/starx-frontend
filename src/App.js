@@ -1,6 +1,6 @@
 import logo from "./assets/images/logo.PNG";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   CssBaseline,
   Grid,
@@ -11,7 +11,10 @@ import {
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
 import Survey from "./components/Survey";
+import TAdol from "./components/TRxANSITION-adolescent";
+import TAdult from "./components/TRxANSITION-adult";
 import Home from "./components/home";
+import About from "./components/about";
 
 const theme = createTheme({
   palette: {
@@ -28,13 +31,21 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <NavBar />
-      <div className="wrapper">
-        <Home />
-      </div>
-    </ThemeProvider>
+    <div>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <NavBar />
+      </ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/TRxANSITION-adolescent" element={<TAdol />}></Route>
+
+          <Route path="/TRxANSITION-adult" element={<TAdult />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

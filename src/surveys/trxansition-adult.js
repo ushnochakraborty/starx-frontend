@@ -1,6 +1,45 @@
 export const json = {
   elements: [
     {
+      type: "text",
+      inputType: "date",
+      name: "patient.dob",
+      title: "Please enter your date of birth",
+    },
+    {
+      type: "text",
+      inputType: "date",
+      name: "patient.dod",
+      title: "Please enter your date of diagnosis",
+    },
+    {
+      type: "dropdown",
+      choices: [
+        "American Indian or Alaskan Native",
+        "Asian",
+        "Black or African American",
+        "Hispanic or Latino",
+        "Native Hawaiian or Other Pacific Islander",
+        "White",
+        "Other",
+        "Prefer not to say",
+      ],
+      name: "patient.race",
+      title: "Please enter your race",
+    },
+    {
+      type: "dropdown",
+      name: "gender",
+      title: "What is your self identified gender?",
+      choices: ["Female", "Male", "Other", "Prefer not to say"],
+    },
+    {
+      type: "text",
+      inputType: "number",
+      name: "num.of.meds",
+      title: "How many medications do you take?",
+    },
+    {
       type: "matrix",
       name: "type of condition",
       title: "Type of chronic health condition",
@@ -25,7 +64,8 @@ export const json = {
         },
         {
           value: "symptoms of condition",
-          text: "What physical symptoms do you experience because of your condition?",
+          text:
+            "What physical symptoms do you experience because of your condition?",
         },
         {
           value: "future health risks",
@@ -60,19 +100,23 @@ export const json = {
       rows: [
         {
           value: "names of medicines",
-          text: "What are the names of the medicines, vitamins, and/or supplements your doctor has asked you to take for your health condition?",
+          text:
+            "What are the names of the medicines, vitamins, and/or supplements your doctor has asked you to take for your health condition?",
         },
         {
           value: "when to take medications",
-          text: "When are you supposed to take each of your medications, vitamins, or supplements?",
+          text:
+            "When are you supposed to take each of your medications, vitamins, or supplements?",
         },
         {
           value: "purpose of medications",
-          text: "What is the purpose of each of your medications, vitamins, or supplements?",
+          text:
+            "What is the purpose of each of your medications, vitamins, or supplements?",
         },
         {
           value: "risks of not taking",
-          text: "What could happen if you do not take each of your medications, vitamins, or supplements like your doctor has asked you to?",
+          text:
+            "What could happen if you do not take each of your medications, vitamins, or supplements like your doctor has asked you to?",
         },
       ],
       alternateRows: true,
@@ -103,15 +147,18 @@ export const json = {
       rows: [
         {
           value: "miss medicine",
-          text: "In a typical week, do you usually miss a full day of medicine, either because you forgot to take it or didn't want to take it?",
+          text:
+            "In a typical week, do you usually miss a full day of medicine, either because you forgot to take it or didn't want to take it?",
         },
         {
           value: "trouble remembering",
-          text: "Do you usually have toruble remembering to take your medicines every day?",
+          text:
+            "Do you usually have toruble remembering to take your medicines every day?",
         },
         {
           value: "attend appointments",
-          text: "Do you usually come to your doctor appointments when they are scheduled?",
+          text:
+            "Do you usually come to your doctor appointments when they are scheduled?",
         },
       ],
       alternateRows: true,
@@ -142,15 +189,18 @@ export const json = {
       rows: [
         {
           value: "read nutrition labels",
-          text: "When choosing foods and drinks, do you read the nutrition labels on them to find out if they are healthy choices for you?",
+          text:
+            "When choosing foods and drinks, do you read the nutrition labels on them to find out if they are healthy choices for you?",
         },
         {
           value: "follow diet",
-          text: "Are you supposed to follow any special diet because of your condition?",
+          text:
+            "Are you supposed to follow any special diet because of your condition?",
         },
         {
           value: "diet specifics",
-          text: "If you have a special diet, what are examples of the foods and/or drinks that you should have more or less of?",
+          text:
+            "If you have a special diet, what are examples of the foods and/or drinks that you should have more or less of?",
         },
       ],
       alternateRows: true,
@@ -185,7 +235,8 @@ export const json = {
         },
         {
           value: "need someone to remind",
-          text: "Does someone usually have to remind you to take your medicines?",
+          text:
+            "Does someone usually have to remind you to take your medicines?",
         },
         {
           value: "call for refills",
@@ -197,7 +248,8 @@ export const json = {
         },
         {
           value: "call doctor",
-          text: "Do you yourself usually call or email your doctor when you have a question or need to speak with him/her?",
+          text:
+            "Do you yourself usually call or email your doctor when you have a question or need to speak with him/her?",
         },
         {
           value: "make appointments",
@@ -205,7 +257,8 @@ export const json = {
         },
         {
           value: "perform your own procedures",
-          text: "If you have medical procedures to perform, do you usually perform your medical procedures yourself (catheterization, insulin shots, etc.)?",
+          text:
+            "If you have medical procedures to perform, do you usually perform your medical procedures yourself (catheterization, insulin shots, etc.)?",
         },
       ],
       alternateRows: true,
@@ -236,19 +289,23 @@ export const json = {
       rows: [
         {
           value: "fertility",
-          text: "Would your health condition likely affect your ability to become pregnant or get someone pregnant?",
+          text:
+            "Would your health condition likely affect your ability to become pregnant or get someone pregnant?",
         },
         {
           value: "pregnancy risks",
-          text: "If you're female, what are risks you might face if/when you become pregnant because of your condition?",
+          text:
+            "If you're female, what are risks you might face if/when you become pregnant because of your condition?",
         },
         {
           value: "harmful medicines for fetus",
-          text: "If you're female, do you take any medications that would be harmful to an unborn baby if you became pregnant?",
+          text:
+            "If you're female, do you take any medications that would be harmful to an unborn baby if you became pregnant?",
         },
         {
           value: "safe sex",
-          text: "Can you tell me ways sexually active people help protect themselves from unwanted pregnancy or STD's?",
+          text:
+            "Can you tell me ways sexually active people help protect themselves from unwanted pregnancy or STD's?",
         },
       ],
       alternateRows: true,
@@ -314,7 +371,8 @@ export const json = {
         },
         {
           value: "insurance expiration",
-          text: "If you are insured, at what age will your current health insurance coverage end?",
+          text:
+            "If you are insured, at what age will your current health insurance coverage end?",
         },
         {
           value: "how to get coverage",
@@ -345,7 +403,8 @@ export const json = {
       rows: [
         {
           value: "manage health condition in adulthood",
-          text: "Who manages your health condition, for example help you remember to take your medicines, call in prescription refills, pick up meds from pharmacy, and make doctor appointments?",
+          text:
+            "Who manages your health condition, for example help you remember to take your medicines, call in prescription refills, pick up meds from pharmacy, and make doctor appointments?",
         },
       ],
       alternateRows: true,
@@ -376,7 +435,8 @@ export const json = {
         },
         {
           value: "transfer medical records",
-          text: "In order to get your medical records transferred to another doctor, what is required to make this happen?",
+          text:
+            "In order to get your medical records transferred to another doctor, what is required to make this happen?",
         },
       ],
     },
