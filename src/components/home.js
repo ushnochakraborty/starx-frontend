@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  CssBaseline,
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-} from "@mui/material";
-import SAdol from "./TRxANSITION-adolescent";
-import About from "./about";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Grid, Typography, Card, CardContent } from "@mui/material";
 
 export default function home() {
   return (

@@ -14,7 +14,7 @@ function sendDataToServer(survey) {
   alert("The results are: " + JSON.stringify(survey.data));
 }
 
-function SPediatric() {
+function SAdol() {
   return <Survey model={survey} onComplete={sendDataToServer} />;
 }
-export default SPediatric;
+export default SAdol;

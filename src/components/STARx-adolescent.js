@@ -6,13 +6,13 @@ import "../index.css";
 import { json } from "../surveys/starx-pediatric";
 
 StylesManager.applyTheme("defaultV2");
-function SurveyComponent() {
+function SAdol() {
   const survey = new Model(json);
   return (
     <div>
       <h1>STARx Adolescent Survey</h1>
-      <Survey model={survey} />;
+      <Survey model={survey} />
     </div>
   );
 }
-export default SurveyComponent;
+export default SAdol;
