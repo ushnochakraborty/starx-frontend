@@ -15,7 +15,11 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../assets/images/logo.PNG";
 
-const pages = ["About", "Resources", "Support"];
+const pages = [
+  ["About", "/About"],
+  ["Resources", "/Resources"],
+  ["Support", "/Support"],
+];
 const settings = ["Previous Results", "Logout"];
 
 function NavBar() {
@@ -99,8 +103,13 @@ function NavBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    a
+                    href={page[1]}
+                  >
+                    <Typography textAlign="center">{page[0]}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -117,7 +126,7 @@ function NavBar() {
               color="text.primary"
               noWrap
               component="a"
-              href=""
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -133,9 +142,11 @@ function NavBar() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
+                  a
+                  href={page[1]}
                   sx={{ my: 2, color: "text-primary", display: "block" }}
                 >
-                  {page}
+                  {page[0]}
                 </Button>
               ))}
             </Box>
