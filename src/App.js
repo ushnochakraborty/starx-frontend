@@ -14,6 +14,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import Resources from "./components/Resources";
 import Support from "./components/Support";
+import Results from "./components/results";
 
 const theme = createTheme({
   palette: {
@@ -44,10 +45,10 @@ function App() {
           <Route path="/TRxANSITION-adolescent" element={<TAdol />}></Route>
           <Route path="/TRxANSITION-adult" element={<TAdult />}></Route>
           <Route path="/TRxANSITION-parent" element={<TParent />}></Route>
-
           <Route path="/STARx-adult" element={<SAdult />}></Route>
           <Route path="/STARx-adolescent" element={<SAdol />}></Route>
           <Route path="/STARx-parent" element={<SParent />}></Route>
+          <Route path="/results" element={<Results />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

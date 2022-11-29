@@ -16,8 +16,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../assets/images/logo.PNG";
 
 const pages = [
-  ["About", "/About"],
-  ["Resources", "/Resources"],
+  ["About", "https://www.med.unc.edu/transition/about-us-1/"],
+  [
+    "Resources",
+    "https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/",
+  ],
   ["Support", "/Support"],
 ];
 const settings = ["Previous Results", "Logout"];

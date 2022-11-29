@@ -8,6 +8,6 @@ import { json } from "../surveys/trxansition-adolescent";
 StylesManager.applyTheme("defaultV2");
 function SurveyComponent() {
   const survey = new Model(json);
-  return <Survey model={survey} />;
+  return <Survey model={survey} marginLeft="25px" />;
 }
 export default SurveyComponent;

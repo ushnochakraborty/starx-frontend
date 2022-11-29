@@ -20,6 +20,14 @@ function SParent() {
       {" "}
       <h1>STARx Parent Survey</h1>{" "}
       <Survey model={survey} onComplete={sendDataToServer} />{" "}
+      <h2>Have questions? Feel free to reach out to us at the support tab</h2>
+      <h3>Results</h3>
+      <p>Your child's progress is on track!</p>
+      <p>
+        In order to learn more about your child's journey you can send your
+        results to your provider, or refer to the resources page linked above
+        for specific pamphlets regarding your growth areas
+      </p>
     </div>
   );
 }
