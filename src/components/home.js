@@ -57,12 +57,15 @@ export default function home() {
                 <Typography variant="h5" align="center" paddingBottom="10px">
                   English
                 </Typography>
-                <Typography a>STARx Parent Survey</Typography>
-                <Typography a>STARx Adult Patient Survey</Typography>
-                <Typography a>STARx Pediatric Patient Survey</Typography>
+                <a href="/STARx-parent">STARx Parent Survey</a>
                 <br></br>
-                <Typography a>TRxANSITION Parent Survey</Typography>
-
+                <a href="/STARx-adult">STARx Adult Patient Survey</a>
+                <br></br>
+                <a href="/STARx-adolescent">STARx Adolescent Patient Survey</a>
+                <br></br>
+                <br></br>
+                <a href="/TRxANSITION-parent">TRxANSITION Parent Survey</a>
+                <br></br>
                 <a href="/TRxANSITION-adolescent">
                   TRxANSITION Adolescent Patient Survey
                 </a>
