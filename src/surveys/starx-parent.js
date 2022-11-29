@@ -1,6 +1,45 @@
 export const json = {
   elements: [
     {
+      type: "text",
+      inputType: "date",
+      name: "patient.dob",
+      title: "Please enter your date of birth",
+    },
+    {
+      type: "text",
+      inputType: "date",
+      name: "patient.dod",
+      title: "Please enter your date of diagnosis",
+    },
+    {
+      type: "dropdown",
+      choices: [
+        "American Indian or Alaskan Native",
+        "Asian",
+        "Black or African American",
+        "Hispanic or Latino",
+        "Native Hawaiian or Other Pacific Islander",
+        "White",
+        "Other",
+        "Prefer not to say",
+      ],
+      name: "patient.race",
+      title: "Please enter your race",
+    },
+    {
+      type: "dropdown",
+      name: "gender",
+      title: "What is your self identified gender?",
+      choices: ["Female", "Male", "Other", "Prefer not to say"],
+    },
+    {
+      type: "text",
+      inputType: "number",
+      name: "num.of.meds",
+      title: "How many medications do you take?",
+    },
+    {
       type: "matrix",
       name: "how often",
       title:
@@ -26,46 +65,46 @@ export const json = {
           value: 5,
           text: "Always",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "understand doctor",
+          value: "q1",
           text: "How often did your child make an effort to understand what his/her doctor told them?",
         },
         {
-          value: "take medicine",
+          value: "q2",
           text: "How often did your child take his/her medicines on your own?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "ask questions",
+          value: "q3",
           text: "How often did your child ask his/her doctor or nurse questions about their illness, medicines or medical care?",
         },
         {
-          value: "make appointments",
+          value: "q4",
           text: "How often did your child make their own appointments?",
         },
         {
-          value: "need someone to remind",
+          value: "q5",
           text: "How often did your child need someone to remind him/her to take their medicines?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "personal reminders",
+          value: "q6",
           text: "How often did your child use things like pillboxes, schedules, or alarm to help him/her take their medicines when they were supposed to?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "internet research",
+          value: "q7",
           text: "How often did you use the internet, books or other guides to find out more about his/her illness?",
         },
         {
-          value: "forget medicine",
+          value: "q8",
           text: "How often did your child forget to take his/her medicines?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "handle problems",
+          value: "q9",
           text: "How often did your child work with his/her doctor to take care of new health problems that came up?",
         },
       ],
@@ -98,23 +137,20 @@ export const json = {
           value: 5,
           text: "A Lot",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "about illness",
+          value: "q10",
           text: "How much do your child know about his/her illness?",
         },
         {
-          value: "taking care of illness",
+          value: "q11",
           text: "How much do your child know about taking care of his/her illness?",
         },
         {
-          value: "not taking medicine",
+          value: "q12",
           text: "How much do your child know about what will happen if he/she do not take their medicine?",
+          visibleIf: "{num.of.meds} != 0",
         },
       ],
       alternateRows: true,
@@ -146,34 +182,31 @@ export const json = {
           value: 5,
           text: "Very Easy",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "talk",
+          value: "q13",
           text: "How easy or hard is it for your child to talk to his/her doctor?",
         },
         {
-          value: "plan",
+          value: "q14",
           text: "How easy or hard is it for your child to make a plan with his/her doctor to care for your health?",
         },
         {
-          value: "see doctor alone",
+          value: "q15",
           text: "How easy or hard is it for your child see his/her doctor by himself or herself?",
         },
         {
-          value: "take medicine",
+          value: "q16",
           text: "How easy or hard is it for your child to take his/her medicines the way they are supposed ot be taken?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "take care of yourself",
+          value: "q17",
           text: "How easy or hard is it for your child to take care of himself/herself?",
         },
         {
-          value: "move to adult care",
+          value: "q18",
           text: "How easy or hard do your child think it will be for you to move from pediatrics to adult-focused care?",
         },
       ],

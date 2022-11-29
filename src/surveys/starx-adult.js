@@ -7,8 +7,41 @@ export const json = {
       title: "Please enter your date of birth",
     },
     {
+      type: "text",
+      inputType: "date",
+      name: "patient.dod",
+      title: "Please enter your date of diagnosis",
+    },
+    {
+      type: "dropdown",
+      choices: [
+        "American Indian or Alaskan Native",
+        "Asian",
+        "Black or African American",
+        "Hispanic or Latino",
+        "Native Hawaiian or Other Pacific Islander",
+        "White",
+        "Other",
+        "Prefer not to say",
+      ],
+      name: "patient.race",
+      title: "Please enter your race",
+    },
+    {
+      type: "dropdown",
+      name: "gender",
+      title: "What is your self identified gender?",
+      choices: ["Female", "Male", "Other", "Prefer not to say"],
+    },
+    {
+      type: "text",
+      inputType: "number",
+      name: "num.of.meds",
+      title: "How many medications do you take?",
+    },
+    {
       type: "matrix",
-      name: "how often",
+      name: "how.often",
       title:
         "Please check the one that shows how often you have done each thing in the past 3 months.",
       columns: [
@@ -32,53 +65,47 @@ export const json = {
           value: 5,
           text: "Always",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "understand doctor",
-          text:
-            "How often did you make an effort to understand what your doctor told you?",
+          value: "q1",
+          text: "How often did you make an effort to understand what your doctor told you?",
         },
         {
-          value: "take medicine",
+          value: "q2",
           text: "How often did you take your medicines on your own?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "ask questions",
-          text:
-            "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
+          value: "q3",
+          text: "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
         },
         {
-          value: "make appointments",
+          value: "q4",
           text: "How often did you make your own appointments?",
         },
         {
-          value: "need someone to remind",
-          text:
-            "How often did you need someone to remind you to take your medicines?",
+          value: "q5",
+          text: "How often did you need someone to remind you to take your medicines?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "personal reminders",
-          text:
-            "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
+          value: "q6",
+          text: "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "internet research",
-          text:
-            "How often did you use the internet, books or other guides to find out more about his/her illness?",
+          value: "q7",
+          text: "How often did you use the internet, books or other guides to find out more about his/her illness?",
         },
         {
-          value: "forget medicine",
+          value: "q8",
           text: "How often did you forget to take your medicines?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "handle problems",
-          text:
-            "How often did you work with your doctor to take care of new health problems that came up?",
+          value: "q9",
+          text: "How often did you work with your doctor to take care of new health problems that came up?",
         },
       ],
       alternateRows: true,
@@ -86,7 +113,7 @@ export const json = {
     },
     {
       type: "matrix",
-      name: "do you know",
+      name: "do.you.know",
       title:
         "Some patients know a lot about their heatlh and some patients do not. How much do you know? Please check the best answer.",
       columns: [
@@ -110,24 +137,20 @@ export const json = {
           value: 5,
           text: "A Lot",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "about illness",
+          value: "q10",
           text: "How much do you know about your illness?",
         },
         {
-          value: "taking care of illness",
+          value: "q11",
           text: "How much do you know about taking care of your illness?",
         },
         {
-          value: "not taking medicine",
-          text:
-            "How much do you know about what will happen if you do not take your medicine?",
+          value: "q12",
+          text: "How much do you know about what will happen if you do not take your medicine?",
+          visibleIf: "{num.of.meds} != 0",
         },
       ],
       alternateRows: true,
@@ -159,38 +182,32 @@ export const json = {
           value: 5,
           text: "Very Easy",
         },
-        {
-          value: 0,
-          text: "I do not take any medicine",
-        },
       ],
       rows: [
         {
-          value: "talk",
+          value: "q13",
           text: "How easy or hard is it for you to talk to your doctor?",
         },
         {
-          value: "plan",
-          text:
-            "How easy or hard is it for you to make a plan with your doctor to care for your health?",
+          value: "q14",
+          text: "How easy or hard is it for you to make a plan with your doctor to care for your health?",
         },
         {
-          value: "see doctor alone",
+          value: "q15",
           text: "How easy or hard is it for you see your doctor by yourself?",
         },
         {
-          value: "take medicine",
-          text:
-            "How easy or hard is it for you to take your medicines the way they are supposed ot be taken?",
+          value: "q16",
+          text: "How easy or hard is it for you to take your medicines the way they are supposed ot be taken?",
+          visibleIf: "{num.of.meds} != 0",
         },
         {
-          value: "take care of yourself",
+          value: "q17",
           text: "How easy or hard is it for you to take care of yourself?",
         },
         {
-          value: "move to adult care",
-          text:
-            "How easy or hard do you think it will be for you to find other doctors?",
+          value: "q18",
+          text: "How easy or hard do you think it will be for you to find other doctors?",
         },
       ],
     },

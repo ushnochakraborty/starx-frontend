@@ -59,18 +59,16 @@ export const json = {
       ],
       rows: [
         {
-          value: "name of condition",
+          value: "q1",
           text: "What is the name of your child's health condition?",
         },
         {
-          value: "symptoms of condition",
-          text:
-            "What physical symptoms does your child experience because of their condition?",
+          value: "q2",
+          text: "What physical symptoms does your child experience because of their condition?",
         },
         {
-          value: "future health risks",
-          text:
-            "How might your child's condition affect their health in the future?",
+          value: "q3",
+          text: "How might your child's condition affect their health in the future?",
         },
       ],
       alternateRows: true,
@@ -94,30 +92,26 @@ export const json = {
           text: "Cannot name any",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "names of medicines",
-          text:
-            "What are the names of the medicines, vitamins, and/or supplements your child is supposed to be taking for their condition?",
+          value: "q4",
+          text: "What are the names of the medicines, vitamins, and/or supplements your child is supposed to be taking for their condition?",
         },
         {
-          value: "when to take medications",
-          text:
-            "When is your child supposed to take each of their medications, vitamins, or supplements?",
+          value: "q5",
+          text: "When is your child supposed to take each of their medications, vitamins, or supplements?",
         },
         {
-          value: "purpose of medications",
-          text:
-            "What is the purpose of each of your child's medications, vitamins, or supplements?",
+          value: "q6",
+          text: "What is the purpose of each of your child's medications, vitamins, or supplements?",
         },
         {
-          value: "risks of not taking",
-          text:
-            "What could happen if your child does not take each of their medications, vitamins, or supplements like your doctor has asked them to?",
+          value: "q7",
+          text: "What could happen if your child does not take each of their medications, vitamins, or supplements like your doctor has asked them to?",
         },
       ],
       alternateRows: true,
@@ -141,25 +135,22 @@ export const json = {
           text: "No",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "miss medicine",
-          text:
-            "In a typical week, does your child usually miss a full day of medicine, either because they forgot to take it or didn't want to take it?",
+          value: "q8",
+          text: "In a typical week, does your child usually miss a full day of medicine, either because they forgot to take it or didn't want to take it?",
         },
         {
-          value: "trouble remembering",
-          text:
-            "Does your child usually have toruble remembering to take their medicines every day?",
+          value: "q9",
+          text: "Does your child usually have toruble remembering to take their medicines every day?",
         },
         {
-          value: "attend appointments",
-          text:
-            "Does your child usually come to their doctor appointments when they are scheduled?",
+          value: "q10",
+          text: "Does your child usually come to their doctor appointments when they are scheduled?",
         },
       ],
       alternateRows: true,
@@ -183,25 +174,22 @@ export const json = {
           text: "Does not know",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "read nutrition labels",
-          text:
-            "When choosing foods and drinks, does your child read the nutrition labels on them to find out if they are healthy choices for them?",
+          value: "q11",
+          text: "When choosing foods and drinks, does your child read the nutrition labels on them to find out if they are healthy choices for them?",
         },
         {
-          value: "follow diet",
-          text:
-            "Is your child supposed to follow any special diet because of their condition?",
+          value: "q12",
+          text: "Is your child supposed to follow any special diet because of their condition?",
         },
         {
-          value: "diet specifics",
-          text:
-            "If your child has a special diet, what are examples of the foods and/or drinks that they should have more or less of?",
+          value: "q13",
+          text: "If your child has a special diet, what are examples of the foods and/or drinks that they should have more or less of?",
         },
       ],
       alternateRows: true,
@@ -225,44 +213,38 @@ export const json = {
           text: "No",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "remember to take medicines",
-          text:
-            "Does your child ususally remember to take their medicines on their own?",
+          value: "q14",
+          text: "Does your child ususally remember to take their medicines on their own?",
         },
         {
-          value: "need someone to remind",
-          text:
-            "Does someone usually have to remind your child to take their medicines?",
+          value: "q15",
+          text: "Does someone usually have to remind your child to take their medicines?",
         },
         {
-          value: "call for refills",
-          text:
-            "Does your child usually call in their prescription refills themself?",
+          value: "q16",
+          text: "Does your child usually call in their prescription refills themself?",
         },
         {
-          value: "pick up refills",
-          text:
-            "Does your child usually pick up refills from the pharmacy themself?",
+          value: "q17",
+          text: "Does your child usually pick up refills from the pharmacy themself?",
         },
         {
-          value: "call doctor",
-          text:
-            "Does your child usually call or email their doctor when they have a question or need to speak with him/her?",
+          value: "q18",
+          text: "Does your child usually call or email their doctor when they have a question or need to speak with him/her?",
         },
         {
-          value: "make appointments",
+          value: "q19",
           text: "Does your child usually make their own doctor appointments?",
         },
         {
-          value: "perform your own procedures",
-          text:
-            "If your child has medical procedures to perform, do they usually perform their medical procedures themself (catheterization, insulin shots, etc.)?",
+          value: "q20",
+          text: "If your child has medical procedures to perform, do they usually perform their medical procedures themself (catheterization, insulin shots, etc.)?",
         },
       ],
       alternateRows: true,
@@ -286,30 +268,26 @@ export const json = {
           text: "Does not know",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "fertility",
-          text:
-            "Would your child's health condition likely affect their ability to become pregnant or get someone pregnant?",
+          value: "q21",
+          text: "Would your child's health condition likely affect their ability to become pregnant or get someone pregnant?",
         },
         {
-          value: "pregnancy risks",
-          text:
-            "If your child is female, what are risks theyy might face if/when they become pregnant because of their condition?",
+          value: "q22",
+          text: "If your child is female, what are risks theyy might face if/when they become pregnant because of their condition?",
         },
         {
-          value: "harmful medicines for fetus",
-          text:
-            "If your child is female, do they take any medications that would be harmful to an unborn baby if they became pregnant?",
+          value: "q23",
+          text: "If your child is female, do they take any medications that would be harmful to an unborn baby if they became pregnant?",
         },
         {
-          value: "safe sex",
-          text:
-            "Can you tell me ways sexually active people help protect themselves from unwanted pregnancy or STD's?",
+          value: "q24",
+          text: "Can you tell me ways sexually active people help protect themselves from unwanted pregnancy or STD's?",
         },
       ],
       alternateRows: true,
@@ -335,9 +313,8 @@ export const json = {
       ],
       rows: [
         {
-          value: "career plans",
-          text:
-            "What are your child's future plans in regards to school and/or a job?",
+          value: "q25",
+          text: "What are your child's future plans in regards to school and/or a job?",
         },
       ],
       alternateRows: true,
@@ -361,30 +338,26 @@ export const json = {
           text: "Does not know",
         },
         {
-          value: null,
+          value: 0,
           text: "N/A",
         },
       ],
       rows: [
         {
-          value: "what is health insurance",
-          text:
-            "What is health insurance and why is it important for your child to have?",
+          value: "q26",
+          text: "What is health insurance and why is it important for your child to have?",
         },
         {
-          value: "health insurance provider",
-          text:
-            "What is the name of your child's current health insurance provider?",
+          value: "q27",
+          text: "What is the name of your child's current health insurance provider?",
         },
         {
-          value: "insurance expiration",
-          text:
-            "If your child is insured, at what age will their current health insurance coverage end?",
+          value: "q28",
+          text: "If your child is insured, at what age will their current health insurance coverage end?",
         },
         {
-          value: "how to get coverage",
-          text:
-            "How can your child get health insurance coverage for themself when they age out of their current coverage?",
+          value: "q29",
+          text: "How can your child get health insurance coverage for themself when they age out of their current coverage?",
         },
       ],
       alternateRows: true,
@@ -410,9 +383,8 @@ export const json = {
       ],
       rows: [
         {
-          value: "manage health condition in adulthood",
-          text:
-            "When your child becomes an adult, who will manage their health condition, for example help them remember to take your medicines, call in prescription refills, pick up meds from pharmacy, and make doctor appointments?",
+          value: "q30",
+          text: "When your child becomes an adult, who will manage their health condition, for example help them remember to take your medicines, call in prescription refills, pick up meds from pharmacy, and make doctor appointments?",
         },
       ],
       alternateRows: true,
@@ -438,14 +410,12 @@ export const json = {
       ],
       rows: [
         {
-          value: "how to find doctor",
-          text:
-            "When it comes time for your child to switch to an adult doctor, how will you find one?",
+          value: "q31",
+          text: "When it comes time for your child to switch to an adult doctor, how will you find one?",
         },
         {
-          value: "transfer medical records",
-          text:
-            "In order to get your child's medical records transferred to another doctor, what is required to make this happen?",
+          value: "q32",
+          text: "In order to get your child's medical records transferred to another doctor, what is required to make this happen?",
         },
       ],
     },
