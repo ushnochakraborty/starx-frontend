@@ -508,4 +508,7 @@ export const json = {
         "For all of the following questions, please select the option that best reflects the parent's response.",
     },
   ],
+  showQuestionNumbers: "on",
+  completedHTML:
+    "<h2>Thank you for completing the survey</h2></br><h2>Your child's readiness score is 25/90</h2></br><h2>For resources on how to improve your child's skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };
