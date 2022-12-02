@@ -1,4 +1,7 @@
 export const json = {
+  title: "STARx Parent Survey",
+  description:
+    "A self administered version of the STARx survey for parents of patients.",
   elements: [
     {
       type: "text",
@@ -233,4 +236,6 @@ export const json = {
     },
   ],
   showQuestionNumbers: "on",
+  completedHTML:
+    "<h2>Thank you for completing the survey</h2></br><h2>Your score is 85/90</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };

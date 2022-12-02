@@ -290,5 +290,5 @@ export const json = {
   ],
   showQuestionNumbers: "on",
   completedHtml:
-    "<p><h4>Thank you for sharing this information with us.</h4></p><p>Your name is: <b>{section3[5][0]}</b></p><p>Your email is: <b>{section3}</b></p><p>This is what is on your mind:</p><p>{comment}</p>",
+    "<h2>Thank you for completing the survey</h2></br><h2>Your score is 0/90</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };

@@ -18,7 +18,11 @@ function SParent() {
   return (
     <div>
       {" "}
-      <Survey model={survey} onComplete={sendDataToServer} />{" "}
+      <Survey
+        model={survey}
+        onComplete={window.open("./results")}
+        align="center"
+      />{" "}
     </div>
   );
 }

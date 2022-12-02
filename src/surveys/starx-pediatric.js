@@ -131,7 +131,8 @@ export const json = {
           rows: [
             {
               value: "q1",
-              text: "How often did you make an effort to understand what your doctor told you?",
+              text:
+                "How often did you make an effort to understand what your doctor told you?",
             },
             {
               value: "q2",
@@ -140,7 +141,8 @@ export const json = {
             },
             {
               value: "q3",
-              text: "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
+              text:
+                "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
             },
             {
               value: "q4",
@@ -148,17 +150,20 @@ export const json = {
             },
             {
               value: "q5",
-              text: "How often did you need someone to remind you to take your medicines?",
+              text:
+                "How often did you need someone to remind you to take your medicines?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q6",
-              text: "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
+              text:
+                "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q7",
-              text: "How often did you use the internet, books or other guides to find out more about his/her illness?",
+              text:
+                "How often did you use the internet, books or other guides to find out more about his/her illness?",
             },
             {
               value: "q8",
@@ -167,7 +172,8 @@ export const json = {
             },
             {
               value: "q9",
-              text: "How often did you work with your doctor to take care of new health problems that came up?",
+              text:
+                "How often did you work with your doctor to take care of new health problems that came up?",
             },
           ],
         },
@@ -210,7 +216,8 @@ export const json = {
             },
             {
               value: "q12",
-              text: "How much does you know about what will happen if you do not take your medicines?",
+              text:
+                "How much does you know about what will happen if you do not take your medicines?",
               visibleIf: "{num.of.medications} != 0",
             },
           ],
@@ -250,15 +257,18 @@ export const json = {
             },
             {
               value: "q14",
-              text: "How easy or hard is it for you to make a plan with your doctor to care for your health?",
+              text:
+                "How easy or hard is it for you to make a plan with your doctor to care for your health?",
             },
             {
               value: "q15",
-              text: "How easy or hard is it for you to see your doctor by yourself?",
+              text:
+                "How easy or hard is it for you to see your doctor by yourself?",
             },
             {
               value: "q16",
-              text: "How easy or hard is it for you to take your medicines the way they are supposed to?",
+              text:
+                "How easy or hard is it for you to take your medicines the way they are supposed to?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
@@ -267,7 +277,8 @@ export const json = {
             },
             {
               value: "q18",
-              text: "How easy or hard do you think it will be for you to move from pediatrics to adult-focused care?",
+              text:
+                "How easy or hard do you think it will be for you to move from pediatrics to adult-focused care?",
             },
           ],
         },
@@ -277,4 +288,7 @@ export const json = {
         "For all of the following questions, select the answer that best describes you.",
     },
   ],
+  showQuestionNumbers: "on",
+  completedHtml:
+    "<h2>Thank you for completing the survey</h2></br><h2>Your score is 89/90</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };

@@ -10,7 +10,7 @@ import SParent from "./components/STARx-parent";
 import TAdol from "./components/TRxANSITION-adolescent";
 import TAdult from "./components/TRxANSITION-adult";
 import TParent from "./components/TRxANSITION-parent";
-import Home from "./components/home";
+import Home from "./components/NewHome";
 import About from "./components/about";
 import Resources from "./components/Resources";
 import Support from "./components/Support";
