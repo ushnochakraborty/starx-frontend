@@ -11,7 +11,6 @@ var survey = new Model(json);
 
 function sendDataToServer(survey) {
   //send Ajax request to your web server
-  alert("The results are: " + JSON.stringify(survey.data));
 }
 
 function SAdol() {

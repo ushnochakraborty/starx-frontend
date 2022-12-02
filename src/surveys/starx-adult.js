@@ -131,7 +131,8 @@ export const json = {
           rows: [
             {
               value: "q1",
-              text: "How often did you make an effort to understand what your doctor told you?",
+              text:
+                "How often did you make an effort to understand what your doctor told you?",
             },
             {
               value: "q2",
@@ -140,7 +141,8 @@ export const json = {
             },
             {
               value: "q3",
-              text: "How often did you ask doctors or nurses questions about your illness, medicines, or medical care?",
+              text:
+                "How often did you ask doctors or nurses questions about your illness, medicines, or medical care?",
             },
             {
               value: "q4",
@@ -148,17 +150,20 @@ export const json = {
             },
             {
               value: "q5",
-              text: "How often did you need someone to remind you to take your medicines?",
+              text:
+                "How often did you need someone to remind you to take your medicines?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q6",
-              text: "How often did you use things like pillboxes, schedules, or alarms to help you take your medicines when you were supposed to?",
+              text:
+                "How often did you use things like pillboxes, schedules, or alarms to help you take your medicines when you were supposed to?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q7",
-              text: "How often did you use the internet, books, or other guides to find out more about your illness?",
+              text:
+                "How often did you use the internet, books, or other guides to find out more about your illness?",
             },
             {
               value: "q8",
@@ -167,7 +172,8 @@ export const json = {
             },
             {
               value: "q9",
-              text: "How often did you work with your doctor to take care of new health problems that came up?",
+              text:
+                "How often did you work with your doctor to take care of new health problems that came up?",
             },
           ],
         },
@@ -210,7 +216,8 @@ export const json = {
             },
             {
               value: "q12",
-              text: "How much do you know about what will happen if you do not take your medicine?",
+              text:
+                "How much do you know about what will happen if you do not take your medicine?",
               visibleIf: "{num.of.medications} != 0",
             },
           ],
@@ -250,15 +257,18 @@ export const json = {
             },
             {
               value: "q14",
-              text: "How easy or hard is it for you to make a plan with your doctor to care for your health?",
+              text:
+                "How easy or hard is it for you to make a plan with your doctor to care for your health?",
             },
             {
               value: "q15",
-              text: "How easy or hard is it for you to see your doctor by yourself?",
+              text:
+                "How easy or hard is it for you to see your doctor by yourself?",
             },
             {
               value: "q16",
-              text: "How easy or hard is it for you to take your medicines the way they are supposed to be taken?",
+              text:
+                "How easy or hard is it for you to take your medicines the way they are supposed to be taken?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
@@ -267,7 +277,8 @@ export const json = {
             },
             {
               value: "q18",
-              text: "How easy or hard do you think it will be for you to find other doctors?",
+              text:
+                "How easy or hard do you think it will be for you to find other doctors?",
             },
           ],
         },
@@ -277,4 +288,7 @@ export const json = {
         "For all of the following questions, select the answer that best describes you.",
     },
   ],
+  showQuestionNumbers: "on",
+  completedHtml:
+    "<p><h4>Thank you for sharing this information with us.</h4></p><p>Your name is: <b>{section3[5][0]}</b></p><p>Your email is: <b>{section3}</b></p><p>This is what is on your mind:</p><p>{comment}</p>",
 };
