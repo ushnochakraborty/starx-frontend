@@ -1,0 +1,20 @@
+.school-of-medicine {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 900;
+    display: block;
+    height: 30px;
+    margin-top: 0px;
+    margin-right: 16px;
+    position: relative;
+    text-align: center;
+}
+
+.school-of-medicine a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    color: white;
+}
