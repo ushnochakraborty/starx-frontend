@@ -10,15 +10,14 @@ export const json = {
         {
           type: "text",
           name: "date.of.birth",
-          title: "Please enter your date of birth.",
-          isRequired: true,
-          inputType: "date",
+          title: "Please enter your year of birth",
+          inputType: "integer",
         },
         {
           type: "text",
           name: "date.of.diagnosis",
-          title: "Please enter your date of diagnosis.",
-          inputType: "date",
+          title: "Please enter your year of diagnosis.",
+          inputType: "integer",
         },
         {
           type: "dropdown",
@@ -26,6 +25,10 @@ export const json = {
           title: "Please enter your race.",
           isRequired: true,
           choices: [
+            {
+              value: "Prefer not to answer",
+              text: "Prefer not to answer",
+            },
             {
               value: "American Indian or Alaskan Native",
               text: "American Indian or Alaskan Native",
@@ -104,7 +107,7 @@ export const json = {
           type: "matrix",
           name: "section1",
           title:
-            "Please check the one that shows how often you have done each thing in the past 3 months.",
+            "Please check the one that shows how often you have done each thing in the past 3 months. 1 being Never, 5 being Always",
           isRequired: true,
           columns: [
             {
@@ -181,7 +184,7 @@ export const json = {
           type: "matrix",
           name: "section2",
           title:
-            "Some patients know a lot about their health and some patients do not. How much do you know? Please check the best answer.",
+            "Some patients know a lot about their health and some patients do not. Please answer each question according to the following scale.",
           isRequired: true,
           columns: [
             {
@@ -190,19 +193,19 @@ export const json = {
             },
             {
               value: 2,
-              text: "Not Much",
+              text: "A little",
             },
             {
               value: 3,
-              text: "A Little",
-            },
-            {
-              value: 4,
               text: "Some",
             },
             {
+              value: 4,
+              text: "Most",
+            },
+            {
               value: 5,
-              text: "A Lot",
+              text: "A lot",
             },
           ],
           rows: [
@@ -289,6 +292,14 @@ export const json = {
     },
   ],
   showQuestionNumbers: "on",
+  calculatedValues: [
+    {
+      name: "score",
+      expression:
+        "{section1.q1} + {section1.q2} + {section1.q3} + {section1.q4} + {section1.q5}+ {section1.q6} + {section1.q7} + {section1.q8} + {section1.q9} + {section2.q10} + {section2.q11} + {section2.q12} + {section3.q13} + {section3.q14} + {section3.q15} + {section3.q16} + {section3.q17} + {section3.q18}",
+      includeIntoResult: true,
+    },
+  ],
   completedHtml:
-    "<h2>Thank you for completing the survey</h2></br><h2>Your score is 0/90</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
+    "<h2>Thank you for completing the survey</h2></br><h2>Your readiness score is {score} </h2> </br> <h2> Contact your provider to interpret this score. </h2> </br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };

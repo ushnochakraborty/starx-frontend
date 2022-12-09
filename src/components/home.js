@@ -23,7 +23,7 @@ export default function home() {
           >
             <Grid item xs={1} />
             <Grid item xs={10}>
-              <Typography variant="h3" align="center" padding="10px">
+              <Typography variant="h3" align="center">
                 Welcome to the STARx Survey
               </Typography>
               <Typography variant="h3" align="center" padding="10px">

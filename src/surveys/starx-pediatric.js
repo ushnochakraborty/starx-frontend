@@ -10,15 +10,15 @@ export const json = {
         {
           type: "text",
           name: "date.of.birth",
-          title: "Please enter your date of birth.",
+          title: "Please enter your year of birth.",
           isRequired: true,
-          inputType: "date",
+          inputType: "integer",
         },
         {
           type: "text",
           name: "date.of.diagnosis",
-          title: "Please enter your date of diagnosis.",
-          inputType: "date",
+          title: "Please enter your year of diagnosis.",
+          inputType: "integer",
         },
         {
           type: "dropdown",
@@ -26,6 +26,10 @@ export const json = {
           title: "Please enter your race.",
           isRequired: true,
           choices: [
+            {
+              value: "Prefer not to say",
+              text: "Prefer not to say",
+            },
             {
               value: "American Indian or Alaskan Native",
               text: "American Indian or Alaskan Native",
@@ -288,7 +292,15 @@ export const json = {
         "For all of the following questions, select the answer that best describes you.",
     },
   ],
+  calculatedValues: [
+    {
+      name: "score",
+      expression:
+        "{section1.q1} + {section1.q2} + {section1.q3} + {section1.q4} + {section1.q5}+ {section1.q6} + {section1.q7} + {section1.q8} + {section1.q9} + {section2.q10} + {section2.q11} + {section2.q12} + {section3.q13} + {section3.q14} + {section3.q15} + {section3.q16} + {section3.q17} + {section3.q18}",
+      includeIntoResult: true,
+    },
+  ],
   showQuestionNumbers: "on",
   completedHtml:
-    "<h2>Thank you for completing the survey</h2></br><h2>Your score is 89/90</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
+    "<h2>Thank you for completing the survey</h2></br><h2>Your score is {score}</h2></br><h2>Work with your parent/guardian and healthcare providers to understand this score.</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };
