@@ -1,20 +1,25 @@
 export const json = {
-  title: "STARx Pediatric Survey",
-  description:
-    "A self administered version of the STARx survey for pediatric patients.",
+  title: "Cuestionario para los padres",
   logoPosition: "right",
   pages: [
     {
-      name: "page 0",
+      name: "page0",
       elements: [
         {
           type: "radiogroup",
+          name: "dob.preq",
+          title: "¿Tiene su hijo 88 años o más?",
+          choices: ["Sí", "No"],
+          isRequired: true,
+        },
+        {
+          type: "radiogroup",
           name: "meds",
-          title: "Do you take medication?",
+          title: "¿Su hijo toma medicamentos?",
           choices: [
             {
               value: 0,
-              text: "Yes",
+              text: "Sí",
             },
             {
               value: 36,
@@ -31,96 +36,98 @@ export const json = {
         {
           type: "text",
           name: "date.of.birth",
-          title: "Please enter your year of birth.",
-          isRequired: true,
+          title: "Por favor, introduzca le fecha de nacimiento de su hijo",
           inputType: "integer",
+          visibleIf: "{dob.preq} != Yes",
           min: 1933,
           max: 2023,
         },
         {
           type: "text",
           name: "date.of.diagnosis",
-          title: "Please enter your year of diagnosis.",
+          title: "Por favor ingrese su fecha de diagnóstico de su hijo",
           inputType: "integer",
+          visibleIf: "{dob.preq} != Yes",
           min: 1933,
           max: 2023,
         },
         {
           type: "dropdown",
           name: "race",
-          title: "Please enter your race.",
+          title: "Por favor ingrese la raza de su hijo",
           isRequired: true,
           choices: [
             {
-              value: "Prefer not to say",
-              text: "Prefer not to say",
+              value: "Prefer not to answer",
+              text: "Prefiero no responder",
             },
             {
               value: "American Indian or Alaskan Native",
-              text: "American Indian or Alaskan Native",
+              text: "Indio americano o nativo de Alaska",
             },
             {
               value: "Asian",
-              text: "Asian",
+              text: "Asiático",
             },
             {
               value: "Black or African American",
-              text: "Black or African American",
+              text: "Negro o afroamericano",
             },
             {
               value: "Hispanic or Latino",
-              text: "Hispanic or Latino",
+              text: "Hispano o latino",
             },
             {
               value: "Native Hawaiian or Other Pacific Islander",
-              text: "Native Hawaiian or Other Pacific Islander",
+              text: "Nativo hawaiano u otro isleño del Pacífico",
             },
             {
               value: "White",
-              text: "White",
+              text: "Blanco",
             },
             {
               value: "Other",
-              text: "Other",
+              text: "Otra",
             },
           ],
         },
         {
           type: "dropdown",
           name: "gender",
-          title: "What is your self-identified gender?",
+          title: "¿Cuál es su género autoidentificado de su hijo?",
           isRequired: true,
           choices: [
             {
               value: "Male",
-              text: "Male",
+              text: "Hombre",
             },
             {
               value: "Female",
-              text: "Female",
+              text: "Mujer",
             },
             {
               value: "Other",
-              text: "Other",
+              text: "Otra",
             },
             {
               value: "Prefer not to say",
-              text: "Prefer not to say",
+              text: "Prefiero no responder",
             },
           ],
         },
         {
           type: "text",
           name: "num.of.medications",
-          title: "How many medications do you take?",
+          title: "¿Cuántos medicamentos toma su hijo?",
           isRequired: true,
           inputType: "number",
           min: 1,
+          visibleIf: "{meds} == 0",
         },
       ],
       title: "Preliminary Questions",
       description:
-        "Please answer the following questions. The questions with asterisks (*) must be answered.",
+        "Por favor, conteste a las siguientes preguntas. Las preguntas con asteriscos (*) deben ser contestadas.",
     },
     {
       name: "page2",
@@ -129,76 +136,76 @@ export const json = {
           type: "matrix",
           name: "section1",
           title:
-            "Please check the one that shows how often you have done each thing in the past 3 months.",
+            "Por favor marque la frecuencia en cada situación durante los últimos 3 meses.",
           isRequired: true,
           columns: [
             {
               value: 1,
-              text: "Never",
+              text: "Nunca",
             },
             {
               value: 2,
-              text: "Almost Never",
+              text: "Casi nunca",
             },
             {
               value: 3,
-              text: "Sometimes",
+              text: "A veces",
             },
             {
               value: 4,
-              text: "Almost Always",
+              text: "Casi siempre",
             },
             {
               value: 5,
-              text: "Always",
+              text: "Siempre",
             },
           ],
           rows: [
             {
               value: "q1",
               text:
-                "How often did you make an effort to understand what your doctor told you?",
+                "¿Con qué frecuencia trató su hijo de entender lo que decían sus médicos?",
             },
             {
               value: "q2",
-              text: "How often did you take your medicines on your own?",
+              text: " ¿Con qué frecuencia toma las medicinas por su cuenta?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q3",
               text:
-                "How often did you ask doctors or nurses questions about your illness, medicines or medical care?",
+                " ¿Con qué frecuencia hace preguntas a su médico/enfermera/equipo de salud sobre su enfermedad, medicinas o atención médica?",
             },
             {
               value: "q4",
-              text: "How often did you make your own appointments?",
+              text: " ¿Con qué frecuencia solicita sus propias citas? ",
             },
             {
               value: "q5",
               text:
-                "How often did you need someone to remind you to take your medicines?",
+                "¿Con qué frecuencia necesita a alguien para recordarle a tomar sus medicinas?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q6",
               text:
-                "How often did you use things like pillboxes, schedules, or alarm to help you take their medicines when they were supposed to?",
+                "¿Con qué frecuencia usa cosas como cajas para pastillas, calendarios o alarmas para ayudarle a recordar a tomar sus medicinas?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q7",
               text:
-                "How often did you use the internet, books or other guides to find out more about his/her illness?",
+                "¿Con qué frecuencia usa el Internet, libros u otras guías para averiguar más sobre su enfermedad?",
             },
             {
               value: "q8",
-              text: "How often did your forget to take your medicines?",
+              text: "¿Con qué frecuencia olvida tomar sus medicinas?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q9",
               text:
-                "How often did you work with your doctor to take care of new health problems that came up?",
+                "¿Con qué frecuencia discute o pregunta a su médico para ocuparse el manejo de nuevos problemas de salud que surgieron?",
             },
           ],
         },
@@ -206,43 +213,43 @@ export const json = {
           type: "matrix",
           name: "section2",
           title:
-            "Some patients know a lot about their health and some patients do not. How much do you know? Please check the best answer.",
+            "Algunos pacientes saben mucho acerca de su salud y algunos no saben mucho. Por favor marque la repuesta que describe mejor su situación HOY.",
           isRequired: true,
           columns: [
             {
               value: 1,
-              text: "Nothing",
+              text: "Nada",
             },
             {
               value: 2,
-              text: "Not Much",
+              text: "Muy poco",
             },
             {
               value: 3,
-              text: "A Little",
+              text: "Poco",
             },
             {
               value: 4,
-              text: "Some",
+              text: "Algo",
             },
             {
               value: 5,
-              text: "A Lot",
+              text: "Mucho",
             },
           ],
           rows: [
             {
               value: "q10",
-              text: "How much do you know about your illness?",
+              text: " ¿Cuánto sabe acerca de su enfermedad?",
             },
             {
               value: "q11",
-              text: "How much does you know about taking care of your illness?",
+              text: "¿Cuánto sabe sobre el cuidado de su enfermedad?",
             },
             {
               value: "q12",
               text:
-                "How much does you know about what will happen if you do not take your medicines?",
+                "¿Cuánto sabe de lo que pasaría si no se toma sus medicinas?",
               visibleIf: "{num.of.medications} != 0",
             },
           ],
@@ -251,68 +258,67 @@ export const json = {
           type: "matrix",
           name: "section3",
           title:
-            "Some patients may find it hard to do certain things. Please check what best describes how easy or hard you feel it will be for you.",
+            "Ciertas cosas son difíciles de hacer para algunos pacientes. ¿Qué tan fácil o difícil es hacer las siguientes cosas? Por favor marque la mejor respuesta que le describe HOY.",
           isRequired: true,
           columns: [
             {
               value: 1,
-              text: "Very Hard",
+              text: "Muy difícil",
             },
             {
               value: 2,
-              text: "Somewhat Hard",
+              text: "Algo difícil",
             },
             {
               value: 3,
-              text: "Neither Hard nor Easy",
+              text: "Más o Menos",
             },
             {
               value: 4,
-              text: "Somewhat Easy",
+              text: "Algo fácil",
             },
             {
               value: 5,
-              text: "Very Easy",
+              text: "Muy fácil",
             },
           ],
           rows: [
             {
               value: "q13",
-              text: "How easy or hard is it for you to talk to your doctor?",
+              text: "¿Qué tan fácil o difícil es hablar con su médico? ",
             },
             {
               value: "q14",
               text:
-                "How easy or hard is it for you to make a plan with your doctor to care for your health?",
+                "¿Qué tan fácil o difícil es hacer un plan de tratamiento con su médico para cuidar por su salud?",
             },
             {
               value: "q15",
               text:
-                "How easy or hard is it for you to see your doctor by yourself?",
+                " ¿Qué tan fácil o difícil es ver a su médico usted mismo(a) solo(a), sin sus padres?",
             },
             {
               value: "q16",
               text:
-                "How easy or hard is it for you to take your medicines the way they are supposed to?",
+                " ¿Qué tan fácil o difícil es tomar sus medicinas en la manera y tiempo correctos?",
               visibleIf: "{num.of.medications} != 0",
             },
             {
               value: "q17",
-              text: "How easy or hard is it for you to take care of yourself?",
+              text: "¿Qué tan fácil o difícil es cuidar por usted mismo(a)?",
             },
             {
               value: "q18",
               text:
-                "How easy or hard do you think it will be for you to move from pediatrics to adult-focused care?",
+                "¿Qué tan fácil o difícil será hacer un transición/cambio hacia los médicos de adultos?",
             },
           ],
         },
       ],
       title: "STARx Survey",
-      description:
-        "For all of the following questions, select the answer that best describes you.",
     },
   ],
+  showQuestionNumbers: "on",
   calculatedValues: [
     {
       name: "score",
@@ -321,7 +327,6 @@ export const json = {
       includeIntoResult: true,
     },
   ],
-  showQuestionNumbers: "on",
   completedHtml:
-    "<h2>Thank you for completing the survey</h2></br><h2>Your score is {score}</h2></br><h2>Work with your parent/guardian and healthcare providers to understand this score.</h2></br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
+    "<h2>Gracias por completar la cuestionario</h2></br><h2>Su puntaje de preparación es {score} </h2> </br> <h2> Póngase en contacto con su proveedor para interpretar esta puntuación. </h2> </br><h2>Para obtener recursos sobre cómo mejorar sus habilidades, visite <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>nuestra página de recursos</a></h2>",
 };

@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
+import SAdolESP from "./components/ESP-STARx-adolescent";
 import SAdol from "./components/STARx-adolescent";
 import SAdult from "./components/STARx-adult";
 import SAdultESP from "./components/ESP-STARx-adult";
 import SParent from "./components/STARx-parent";
+import SParentESP from "./components/ESP-STARx-parent";
 import TAdol from "./components/TRxANSITION-adolescent";
 import TAdult from "./components/TRxANSITION-adult";
 import TParent from "./components/TRxANSITION-parent";
@@ -43,8 +45,10 @@ function App() {
           <Route path="/TRxANSITION-parent" element={<TParent />}></Route>
           <Route path="/ESP-STARx-adult" element={<SAdultESP />}></Route>
           <Route path="/STARx-adult" element={<SAdult />}></Route>
+          <Route path="/ESP-STARx-adolescent" element={<SAdolESP />}></Route>
           <Route path="/STARx-adolescent" element={<SAdol />}></Route>
           <Route path="/STARx-parent" element={<SParent />}></Route>
+          <Route path="/ESP-STARx-parent" element={<SParentESP />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

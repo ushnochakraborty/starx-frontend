@@ -42,6 +42,8 @@ export const json = {
           title: "Please enter your year of birth",
           inputType: "integer",
           visibleIf: "{dob.preq} != Yes",
+          min: 1933,
+          max: 2023,
         },
         {
           type: "text",
@@ -49,6 +51,8 @@ export const json = {
           title: "Please enter your year of diagnosis.",
           inputType: "integer",
           visibleIf: "{dob.preq} != Yes",
+          min: 1933,
+          max: 2023,
         },
         {
           type: "dropdown",
@@ -120,7 +124,7 @@ export const json = {
           title: "How many medications do you take?",
           isRequired: true,
           inputType: "number",
-          min: 0,
+          min: 1,
           visibleIf: "{meds} == 0",
         },
       ],

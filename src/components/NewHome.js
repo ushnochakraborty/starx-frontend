@@ -59,8 +59,8 @@ export default function home() {
             <div className="survey-card">
               <h1>Español</h1>
               <div className="survey-option">
-                <a href="/STARx-parent">
-                  <div className="button" href="/STARx-parent">
+                <a href="/ESP-STARx-parent">
+                  <div className="button" href="/ESP-STARx-parent">
                     <p>
                       <i>Cuestionario para los padres</i>
                     </p>
@@ -77,8 +77,8 @@ export default function home() {
                 </a>
               </div>
               <div className="survey-option">
-                <a href="/STARx-adolescent">
-                  <div className="button" href="/STARx-adolescent">
+                <a href="/ESP-STARx-adolescent">
+                  <div className="button" href="/ESP-STARx-adolescent">
                     <p>
                       <i>Cuestionario para los adolescentes</i>
                     </p>

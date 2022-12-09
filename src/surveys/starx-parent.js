@@ -40,13 +40,16 @@ export const json = {
           name: "patient.dob",
           title: "Please enter your child's year of birth",
           visibleIf: "{dob.preq} != Yes",
+          min: 1933,
+          max: 2023,
         },
         {
           type: "text",
           inputType: "integer",
           name: "patient.dod",
           title: "Please enter your child's year of diagnosis",
-
+          min: 1933,
+          max: 2023,
           visibleIf: "{dob.preq} != Yes",
         },
         {
@@ -76,6 +79,7 @@ export const json = {
           name: "num.of.meds",
           title: "How many medications does your child take?",
           visibleIf: "{meds} == 0",
+          min: 1,
         },
       ],
     },
