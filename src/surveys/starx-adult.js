@@ -172,7 +172,7 @@ export const json = {
             {
               value: "q2",
               text: "How often did you take your medicines on your own?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q3",
@@ -187,13 +187,13 @@ export const json = {
               value: "q5",
               text:
                 "How often did you need someone to remind you to take your medicines?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q6",
               text:
                 "How often did you use things like pillboxes, schedules, or alarms to help you take your medicines when you were supposed to?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q7",
@@ -203,7 +203,7 @@ export const json = {
             {
               value: "q8",
               text: "How often did you forget to take your medicine(s)?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q9",
@@ -253,7 +253,7 @@ export const json = {
               value: "q12",
               text:
                 "How much do you know about what will happen if you do not take your medicine?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
           ],
         },
@@ -304,7 +304,7 @@ export const json = {
               value: "q16",
               text:
                 "How easy or hard is it for you to take your medicines the way they are supposed to be taken?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q17",

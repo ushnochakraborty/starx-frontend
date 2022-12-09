@@ -169,7 +169,7 @@ export const json = {
             {
               value: "q2",
               text: " ¿Con qué frecuencia toma las medicinas por su cuenta?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q3",
@@ -184,13 +184,13 @@ export const json = {
               value: "q5",
               text:
                 "¿Con qué frecuencia necesita a alguien para recordarle a tomar sus medicinas?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q6",
               text:
                 "¿Con qué frecuencia usa cosas como cajas para pastillas, calendarios o alarmas para ayudarle a recordar a tomar sus medicinas?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q7",
@@ -200,7 +200,7 @@ export const json = {
             {
               value: "q8",
               text: "¿Con qué frecuencia olvida tomar sus medicinas?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q9",
@@ -250,7 +250,7 @@ export const json = {
               value: "q12",
               text:
                 "¿Cuánto sabe de lo que pasaría si no se toma sus medicinas?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
           ],
         },
@@ -301,7 +301,7 @@ export const json = {
               value: "q16",
               text:
                 " ¿Qué tan fácil o difícil es tomar sus medicinas en la manera y tiempo correctos?",
-              visibleIf: "{num.of.medications} != 0",
+              visibleIf: "{meds} == 0",
             },
             {
               value: "q17",
