@@ -68,8 +68,8 @@ export default function home() {
                 </a>
               </div>
               <div className="survey-option">
-                <a href="/STARx-adult">
-                  <div className="button" href="/STARx-adult">
+                <a href="/ESP-STARx-adult">
+                  <div className="button" href="/ESP-STARx-adult">
                     <p>
                       <i>Cuestionario para los adultos</i>
                     </p>

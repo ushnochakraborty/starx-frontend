@@ -14,8 +14,25 @@ export const json = {
           choices: ["Yes", "No"],
           isRequired: true,
         },
+        {
+          type: "radiogroup",
+          name: "meds",
+          title: "Do you take medication?",
+          choices: [
+            {
+              value: 0,
+              text: "Yes",
+            },
+            {
+              value: 36,
+              text: "No",
+            },
+          ],
+          isRequired: true,
+        },
       ],
     },
+
     {
       name: "page1",
       elements: [
@@ -39,10 +56,6 @@ export const json = {
           title: "Please enter your race.",
           isRequired: true,
           choices: [
-            {
-              value: "Prefer not to answer",
-              text: "Prefer not to answer",
-            },
             {
               value: "American Indian or Alaskan Native",
               text: "American Indian or Alaskan Native",
@@ -108,6 +121,7 @@ export const json = {
           isRequired: true,
           inputType: "number",
           min: 0,
+          visibleIf: "{meds} == 0",
         },
       ],
       title: "Preliminary Questions",

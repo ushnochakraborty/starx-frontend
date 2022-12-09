@@ -13,6 +13,22 @@ export const json = {
           choices: ["Yes", "No"],
           isRequired: true,
         },
+        {
+          type: "radiogroup",
+          name: "meds",
+          title: "Does your child take medication?",
+          choices: [
+            {
+              value: 0,
+              text: "Yes",
+            },
+            {
+              value: 36,
+              text: "No",
+            },
+          ],
+          isRequired: true,
+        },
       ],
     },
     {
@@ -23,7 +39,6 @@ export const json = {
           inputType: "integer",
           name: "patient.dob",
           title: "Please enter your child's year of birth",
-
           visibleIf: "{dob.preq} != Yes",
         },
         {
@@ -37,7 +52,6 @@ export const json = {
         {
           type: "dropdown",
           choices: [
-            "Prefer not to answer",
             "American Indian or Alaskan Native",
             "Asian",
             "Black or African American",
@@ -61,6 +75,7 @@ export const json = {
           inputType: "number",
           name: "num.of.meds",
           title: "How many medications does your child take?",
+          visibleIf: "{meds} == 0",
         },
       ],
     },
