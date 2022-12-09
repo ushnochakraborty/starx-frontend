@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
+import NewNavBar from "./components/NewNavBar";
 import SAdolESP from "./components/ESP-STARx-adolescent";
 import SAdol from "./components/STARx-adolescent";
 import SAdult from "./components/STARx-adult";
@@ -34,7 +35,7 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <NavBar />
+        <NewNavBar />
       </ThemeProvider>
       <BrowserRouter>
         <Routes>
