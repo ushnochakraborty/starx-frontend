@@ -10,7 +10,6 @@ function SAdol() {
   const survey = new Model(json);
   return (
     <div>
-      <h1>STARx Adolescent Survey</h1>
       <Survey model={survey} />
     </div>
   );

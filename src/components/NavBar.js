@@ -23,7 +23,7 @@ const pages = [
   ],
   ["Support", "/Support"],
 ];
-const settings = ["Previous Results", "Logout"];
+const settings = [];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
