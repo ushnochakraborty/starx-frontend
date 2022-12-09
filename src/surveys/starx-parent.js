@@ -4,6 +4,18 @@ export const json = {
     "A self administered version of the STARx survey for parents of patients.",
   pages: [
     {
+      name: "page0",
+      elements: [
+        {
+          type: "radiogroup",
+          name: "dob.preq",
+          title: "Is your child over 88 years of age?",
+          choices: ["Yes", "No"],
+          isRequired: true,
+        },
+      ],
+    },
+    {
       name: "page1",
       elements: [
         {
@@ -11,12 +23,16 @@ export const json = {
           inputType: "integer",
           name: "patient.dob",
           title: "Please enter your child's year of birth",
+
+          visibleIf: "{dob.preq} != Yes",
         },
         {
           type: "text",
           inputType: "integer",
           name: "patient.dod",
           title: "Please enter your child's year of diagnosis",
+
+          visibleIf: "{dob.preq} != Yes",
         },
         {
           type: "dropdown",
@@ -92,6 +108,8 @@ export const json = {
               value: "q2",
               text:
                 "How often did your child take his/her medicines on your own?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q3",
@@ -106,11 +124,15 @@ export const json = {
               value: "q5",
               text:
                 "How often did your child need someone to remind him/her to take their medicines?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q6",
               text:
                 "How often did your child use things like pillboxes, schedules, or alarm to help him/her take their medicines when they were supposed to?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q7",
@@ -121,6 +143,8 @@ export const json = {
               value: "q8",
               text:
                 "How often did your child forget to take his/her medicines?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q9",
@@ -157,10 +181,6 @@ export const json = {
               value: 5,
               text: "A Lot",
             },
-            {
-              value: 0,
-              text: "I do not take any medicine",
-            },
           ],
           rows: [
             {
@@ -176,6 +196,8 @@ export const json = {
               value: "q12",
               text:
                 "How much do your child know about what will happen if he/she do not take their medicine?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
           ],
           alternateRows: true,
@@ -231,7 +253,9 @@ export const json = {
             {
               value: "q16",
               text:
-                "How easy or hard is it for your child to take his/her medicines the way they are supposed ot be taken?",
+                "How easy or hard is it for your child to take his/her medicines the way they are supposed to be taken?",
+
+              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q17",

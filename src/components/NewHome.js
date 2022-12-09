@@ -25,7 +25,7 @@ export default function home() {
           </Grid>
           <Grid item xs={12} sm={6} align="center">
             <div className="survey-card">
-              <h1>STARx</h1>
+              <h1>English</h1>
               <div className="survey-option">
                 <a href="/STARx-parent">
                   <div className="button" href="/STARx-parent">
@@ -49,6 +49,38 @@ export default function home() {
                   <div className="button" href="/STARx-adolescent">
                     <p>
                       <i>Adolescent Patient Survey</i>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} align="center">
+            <div className="survey-card">
+              <h1>Español</h1>
+              <div className="survey-option">
+                <a href="/STARx-parent">
+                  <div className="button" href="/STARx-parent">
+                    <p>
+                      <i>Cuestionario para los padres</i>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="survey-option">
+                <a href="/STARx-adult">
+                  <div className="button" href="/STARx-adult">
+                    <p>
+                      <i>Cuestionario para los adultos</i>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="survey-option">
+                <a href="/STARx-adolescent">
+                  <div className="button" href="/STARx-adolescent">
+                    <p>
+                      <i>Cuestionario para los adolescentes</i>
                     </p>
                   </div>
                 </a>

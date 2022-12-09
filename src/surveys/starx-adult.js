@@ -5,6 +5,18 @@ export const json = {
   logoPosition: "right",
   pages: [
     {
+      name: "page0",
+      elements: [
+        {
+          type: "radiogroup",
+          name: "dob.preq",
+          title: "Are you over 88 years of age?",
+          choices: ["Yes", "No"],
+          isRequired: true,
+        },
+      ],
+    },
+    {
       name: "page1",
       elements: [
         {
@@ -12,12 +24,14 @@ export const json = {
           name: "date.of.birth",
           title: "Please enter your year of birth",
           inputType: "integer",
+          visibleIf: "{dob.preq} != Yes",
         },
         {
           type: "text",
           name: "date.of.diagnosis",
           title: "Please enter your year of diagnosis.",
           inputType: "integer",
+          visibleIf: "{dob.preq} != Yes",
         },
         {
           type: "dropdown",
