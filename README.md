@@ -1,6 +1,12 @@
+hosted at https://starx-2e105.web.app/ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## hosting
+
+'npm run build' then 'firebase deploy' to update website
 
 ## Available Scripts
 
