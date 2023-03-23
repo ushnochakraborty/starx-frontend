@@ -7,17 +7,12 @@ import { json } from "../surveys/starx-parent";
 import Result from "./Result"
 import "survey-core/survey.i18n"
 import { useSelector } from "react-redux";
+import { storeParentSurvey } from "../database/api";
 
 StylesManager.applyTheme("defaultV2");
 
-var survey = new Model(json);
-
-function sendDataToServer(survey) {
-  //send Ajax request to your web server
-  alert("The results are: " + JSON.stringify(survey.data));
-}
-
 function SParent() {
+  const survey = new Model(json);
   const [isCompleted, setIsCompleted] = useState(false)
   const [score, setScore] = useState([])
 
@@ -27,14 +22,12 @@ function SParent() {
     survey.locale = lang
   }, [lang])
 
-  const handleCompletion = () => {
-    setIsCompleted(true);
+  const handleCompletion = (sender) => {
+    setScore([sender.data.score1, sender.data.score2, sender.data.score3])
+    setIsCompleted(true)
   }
 
-  survey.onComplete.add((sender) => {
-    setScore([sender.data.score1, sender.data.score2, sender.data.score3])
-    handleCompletion()
-  })
+  survey.onComplete.add(handleCompletion)
 
   var surveyRender = !isCompleted ? (
     <Survey
