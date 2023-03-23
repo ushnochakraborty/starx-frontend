@@ -12,17 +12,32 @@ export const json = {
       name: "page0",
       elements: [
         {
-          type: "boolean",
+          type: "radiogroup",
           name: "dob.preq",
           title: {
             "default": "Is your child over 88 years of age?",
             "es": "¿Tiene su hijo 88 años o más?"
           },
-          choices: ["Yes", "No"],
+          choices: [
+            {
+              value: 1,
+              text: {
+                "default": "Yes",
+                "es": "Sí"
+              },
+            },
+            {
+              value: 0,
+              text: {
+                "default": "No",
+                "es": "No"
+              },
+            },
+          ],
           isRequired: true,
         },
         {
-          type: "boolean",
+          type: "radiogroup",
           name: "meds",
           title: {
             "default": "Does your child take medication?",
@@ -30,12 +45,18 @@ export const json = {
           }, 
           choices: [
             {
-              value: 0,
-              text: "Yes",
+              value: 1,
+              text: {
+                "default": "Yes",
+                "es": "Sí"
+              },
             },
             {
-              value: 36,
-              text: "No",
+              value: 0,
+              text: {
+                "default": "No",
+                "es": "No"
+              },
             },
           ],
           isRequired: true,
@@ -56,6 +77,7 @@ export const json = {
           visibleIf: "{dob.preq} != Yes",
           min: 1933,
           max: 2023,
+          isRequired: true,
         },
         {
           type: "text",
@@ -68,6 +90,7 @@ export const json = {
           min: 1933,
           max: 2023,
           visibleIf: "{dob.preq} != Yes",
+          isRequired: true,
         },
         {
           type: "dropdown",
@@ -133,7 +156,8 @@ export const json = {
                 "es": "Otra",
               }
             },
-          ]
+          ],
+          isRequired: true,
         },
         {
           type: "dropdown",
@@ -171,7 +195,8 @@ export const json = {
                 "es": "Prefiero no responder",
               }
             },
-          ],        
+          ],     
+          isRequired: true,   
         },
         {
           type: "text",
@@ -183,6 +208,7 @@ export const json = {
           },
           visibleIf: "{meds} == 0",
           min: 1,
+          isRequired: true,
         },
       ],
     },
