@@ -12,17 +12,32 @@ export const json = {
       name: "page0",
       elements: [
         {
-          type: "boolean",
-          name: "dob.preq",
+          type: "radiogroup",
+          name: "dob_preq",
           title: {
             "default": "Is your child over 88 years of age?",
             "es": "¿Tiene su hijo 88 años o más?"
           },
-          choices: ["Yes", "No"],
+          choices: [
+            {
+              value: 1,
+              text: {
+                "default": "Yes",
+                "es": "Sí"
+              },
+            },
+            {
+              value: 0,
+              text: {
+                "default": "No",
+                "es": "No"
+              },
+            },
+          ],
           isRequired: true,
         },
         {
-          type: "boolean",
+          type: "radiogroup",
           name: "meds",
           title: {
             "default": "Does your child take medication?",
@@ -30,12 +45,18 @@ export const json = {
           }, 
           choices: [
             {
-              value: 0,
-              text: "Yes",
+              value: 1,
+              text: {
+                "default": "Yes",
+                "es": "Sí"
+              },
             },
             {
-              value: 36,
-              text: "No",
+              value: 0,
+              text: {
+                "default": "No",
+                "es": "No"
+              },
             },
           ],
           isRequired: true,
@@ -48,30 +69,30 @@ export const json = {
         {
           type: "text",
           inputType: "integer",
-          name: "patient.dob",
+          name: "patient_dob",
           title: {
             "default": "Please enter your child's year of birth",
             "es": "Por favor, introduzca le fecha de nacimiento de su hijo"
         },
-          visibleIf: "{dob.preq} != Yes",
           min: 1933,
           max: 2023,
+          isRequired: true,
         },
         {
           type: "text",
           inputType: "integer",
-          name: "patient.dod",
+          name: "patient_dod",
           title: {
             "default": "Please enter your child's year of diagnosis",
             "es": "Por favor ingrese su fecha de diagnóstico de su hijo"
           },
           min: 1933,
           max: 2023,
-          visibleIf: "{dob.preq} != Yes",
+          isRequired: true,
         },
         {
           type: "dropdown",
-          name: "patient.race",
+          name: "patient_race",
           title: {
             "default": "Please enter your child's race",
             "es": "Por favor ingrese la raza de su hijo"
@@ -133,7 +154,8 @@ export const json = {
                 "es": "Otra",
               }
             },
-          ]
+          ],
+          isRequired: true,
         },
         {
           type: "dropdown",
@@ -171,18 +193,19 @@ export const json = {
                 "es": "Prefiero no responder",
               }
             },
-          ],        
+          ],     
+          isRequired: true,   
         },
         {
           type: "text",
           inputType: "number",
-          name: "num.of.meds",
+          name: "num_meds",
           title: {
             "default": "How many medications does your child take?",
             "es": "¿Cuántos medicamentos toma su hijo?",
           },
-          visibleIf: "{meds} == 0",
-          min: 1,
+          min: 0,
+          isRequired: true,
         },
       ],
     },
@@ -253,7 +276,6 @@ export const json = {
                 "default": "How often did your child take his/her medicines on your own?",
                 "es": "¿Con qué frecuencia toma las medicinas por su cuenta?",
               },
-              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q3",
@@ -275,7 +297,6 @@ export const json = {
                 "default": "How often did your child need someone to remind him/her to take their medicines?",
                 "es": "¿Con qué frecuencia necesita a alguien para recordarle a tomar sus medicinas?"
               },
-              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q6",
@@ -283,7 +304,6 @@ export const json = {
                 "default": "How often did your child use things like pillboxes, schedules, or alarm to help him/her take their medicines when they were supposed to?",
                 "es": "¿Con qué frecuencia usa cosas como cajas para pastillas, calendarios o alarmas para ayudarle a recordar a tomar sus medicinas?",
               },
-              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q7",
@@ -298,7 +318,6 @@ export const json = {
                 "default": "How often did your child forget to take his/her medicines?",
                 "es": "¿Con qué frecuencia olvida tomar sus medicinas?",
               },
-              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q9",
@@ -383,7 +402,6 @@ export const json = {
                 "default": "How much do your child know about what will happen if he/she do not take their medicine?",
                 "es": "¿Cuánto sabe de lo que pasaría si no se toma sus medicinas?",
               },
-              visibleIf: "{num.of.meds} != 0",
             },
           ],
           alternateRows: true,
@@ -468,8 +486,6 @@ export const json = {
                 "default": "How easy or hard is it for your child to take his/her medicines the way they are supposed to be taken?",
                 "es": "¿Qué tan fácil o difícil es tomar sus medicinas en la manera y tiempo correctos?",
               },
-
-              visibleIf: "{num.of.meds} != 0",
             },
             {
               value: "q17",

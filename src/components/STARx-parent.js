@@ -25,6 +25,7 @@ function SParent() {
   const handleCompletion = (sender) => {
     setScore([sender.data.score1, sender.data.score2, sender.data.score3])
     setIsCompleted(true)
+    storeParentSurvey(sender.data)
   }
 
   survey.onComplete.add(handleCompletion)
