@@ -9,85 +9,30 @@ export const json = {
   },
   pages: [
     {
-      name: "page0",
-      elements: [
-        {
-          type: "radiogroup",
-          name: "dob_preq",
-          title: {
-            "default": "Is your child over 88 years of age?",
-            "es": "¿Tiene su hijo 88 años o más?"
-          },
-          choices: [
-            {
-              value: 1,
-              text: {
-                "default": "Yes",
-                "es": "Sí"
-              },
-            },
-            {
-              value: 0,
-              text: {
-                "default": "No",
-                "es": "No"
-              },
-            },
-          ],
-          isRequired: true,
-        },
-        {
-          type: "radiogroup",
-          name: "meds",
-          title: {
-            "default": "Does your child take medication?",
-            "es": "¿Su hijo toma medicamentos?",
-          }, 
-          choices: [
-            {
-              value: 1,
-              text: {
-                "default": "Yes",
-                "es": "Sí"
-              },
-            },
-            {
-              value: 0,
-              text: {
-                "default": "No",
-                "es": "No"
-              },
-            },
-          ],
-          isRequired: true,
-        },
-      ],
-    },
-    {
       name: "page1",
       elements: [
         {
           type: "text",
-          inputType: "integer",
+          inputType: "number",
           name: "patient_dob",
           title: {
-            "default": "Please enter your child's year of birth",
-            "es": "Por favor, introduzca le fecha de nacimiento de su hijo"
-        },
-          min: 1933,
-          max: 2023,
+            "default": "Please enter your child's age",
+            "es": "Introduzca la edad de su hijo"
+          },
+          min: 0,
+          max: 90,
           isRequired: true,
         },
         {
           type: "text",
-          inputType: "integer",
+          inputType: "number",
           name: "patient_dod",
           title: {
-            "default": "Please enter your child's year of diagnosis",
-            "es": "Por favor ingrese su fecha de diagnóstico de su hijo"
+            "default": "Please enter your child's age of diagnosis",
+            "es": "Por favor, introduzca la edad de diagnóstico de su hijo"
           },
-          min: 1933,
-          max: 2023,
+          min: 0,
+          max: 90,
           isRequired: true,
         },
         {
@@ -99,60 +44,60 @@ export const json = {
           },
           choices: [
             {
-              value: "Prefer not to answer",
-              text: {
-                "default": "Prefer not to answer",
-                "es": "Prefiero no responder"
-            },
-            },
-            {
-              value: "American Indian or Alaskan Native",
+              value: 0,
               text: {
                 "default": "American Indian or Alaskan Native",
                 "es": "Indio americano o nativo de Alaska",
               },
             },
             {
-              value: "Asian",
+              value: 1,
               text: {
                 "default": "Asian",
                 "es": "Asiático",
               }
             },
             {
-              value: "Black or African American",
+              value: 2,
               text: {
                 "default": "Black or African American",
                 "es": "Negro o afroamericano",
               }
             },
             {
-              value: "Hispanic or Latino",
+              value: 3,
               text: {
                 "default": "Hispanic or Latino",
                 "es": "Hispano o latino",
               }
             },
             {
-              value: "Native Hawaiian or Other Pacific Islander",
+              value: 4,
               text: {
                 "deafult": "Native Hawaiian or Other Pacific Islander",
                 "es": "Nativo hawaiano u otro isleño del Pacífico",
               }
             },
             {
-              value: "White",
+              value: 5,
               text: {
-                "deafult": "white",
+                "deafult": "White",
                 "es": "Blanco",
               }
             },
             {
-              value: "Other",
+              value: 6,
               text: {
-                "default": "other",
+                "default": "Other",
                 "es": "Otra",
               }
+            },
+            {
+              value: -99,
+              text: {
+                "default": "Prefer not to answer",
+                "es": "Prefiero no responder"
+              },
             },
           ],
           isRequired: true,
@@ -166,28 +111,28 @@ export const json = {
           },
           choices: [
             {
-              value: "Male",
+              value: 0,
               text: {
                 "default": "Male",
                 "es": "Hombre",
               }
             },
             {
-              value: "Female",
+              value: 1,
               text: {
                 "default": "Female",
                 "es": "Mujer",
               }
             },
             {
-              value: "Other",
+              value: 3,
               text: {
                 "default": "Other",
                 "es": "Otra",
               }
             },
             {
-              value: "Prefer not to say",
+              value: -99,
               text: {
                 "default": "Prefer not to say",
                 "es": "Prefiero no responder",
@@ -255,7 +200,7 @@ export const json = {
               },
             },
             {
-              value: 0,
+              value: 5,
               text: {
                 "default": "I do not take any medicine",
                 "es": "No tomo ningún medicamento",
@@ -374,7 +319,7 @@ export const json = {
               },
             },
             {
-              value: 0,
+              value: 5,
               text: {
                 "default": "I do not take any medicine",
                 "es": "No tomo ningún medicamento",
@@ -451,7 +396,7 @@ export const json = {
               },
             },
             {
-              value: 0,
+              value: 5,
               text: {
                 "default": "I do not take any medicine",
                 "es": "No tomo ningún medicamento",
@@ -511,17 +456,17 @@ export const json = {
     {
       name: "score1",
       expression:
-        "{section1.q1} + {section1.q2} + {section1.q3} + {section1.q4} + {section1.q5}+ {section1.q6} + {section1.q7} + {section1.q8} + {section1.q9}",
+        "{section1.q5} + {section2.q10} + {section2.q11} + {section2.q12}",
         includeIntoResult: true,
     },
     {
       name: "score2",
-      expression: "{section2.q10} + {section2.q11} + {section2.q12}",
+      expression: "{section1.q1} + {section1.q8} + {section3.q16} + {section3.q17} + {section3.q18}",
       includeIntoResult: true,
     },
     {
       name: "score3",
-      expression: "{section3.q13} + {section3.q14} + {section3.q15} + {section3.q16} + {section3.q17} + {section3.q18}",
+      expression: "{section1.q9} + {section3.q13} + {section3.q14} + {section3.q15}",
       includeIntoResult: true,
     }
   ],

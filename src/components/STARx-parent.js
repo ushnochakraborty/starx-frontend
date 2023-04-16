@@ -14,7 +14,8 @@ StylesManager.applyTheme("defaultV2");
 function SParent() {
   const survey = new Model(json);
   const [isCompleted, setIsCompleted] = useState(false)
-  const [score, setScore] = useState([])
+  const [scoreData, setScoreData] = useState([])
+  const [plainData, setPlainData] = useState([])
 
   const lang = useSelector((state)=>state.lang.value)
 
@@ -23,7 +24,8 @@ function SParent() {
   }, [lang])
 
   const handleCompletion = (sender) => {
-    setScore([sender.data.score1, sender.data.score2, sender.data.score3])
+    setScoreData(sender.data)
+    setPlainData(sender.getPlainData())
     setIsCompleted(true)
     storeParentSurvey(sender.data)
   }
@@ -35,11 +37,12 @@ function SParent() {
       model={survey}
       showCompletedPage={false}
     />
-  ) : (<Result score1={score[0]} score2={score[1]} score3={score[2]}/>)
+  ) : (<Result scoreData={scoreData} plainData={plainData}/>)
 
   return (
     <div>
       {surveyRender}
+      {/* <Result /> */}
     </div>
   );
 }
