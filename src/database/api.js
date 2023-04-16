@@ -5,13 +5,11 @@ import {getDocs, addDoc, collection, query, where, getDoc, doc, setDoc, updateDo
 async function storeParentSurvey(result){
     const parentSurveyRef = collection(db, 'parentsurveys')
     const docRef = await addDoc(parentSurveyRef, {
-        age_over_88: result.dob_preq,
-        patient_meds: result.meds,
-        num_meds: result.num_meds,
-        year_birth: result.patient_dob,
-        year_diagnosis: result.patient_dod,
-        patient_race: result.patient_race,
-        patient_gender: result.gender,
+        age: result.patient_dob,
+        age_diag: result.patient_dod,
+        race: result.patient_race,
+        gender: result.gender,
+        meds: result.num_meds,
         q1: result.section1.q1,
         q2: result.section1.q2,
         q3: result.section1.q3,

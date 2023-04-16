@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
