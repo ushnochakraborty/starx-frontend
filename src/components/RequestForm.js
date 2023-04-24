@@ -1,5 +1,7 @@
 import React from 'react';
+import Avatar from '@mui/material/Avatar';
 import { TextField, Button, Box } from '@mui/material';
+import InsertChartIcon from '@mui/icons-material/InsertChart';
 import { db, auth } from '../database/firebase';
 import { addDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { signInAnonymously, signOut } from 'firebase/auth';
@@ -90,6 +92,9 @@ const DataRequestForm = ({sendDataToPortal}) => {
         bgcolor: 'background.paper',
       }}
     >
+        <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
+            <InsertChartIcon />
+        </Avatar>
       <h2>Data Request Form</h2>
       <Box component="form" onSubmit={handleSubmit} sx={{ width: '100%' }}>
         <TextField

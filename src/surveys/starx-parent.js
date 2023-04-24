@@ -16,7 +16,8 @@ export const json = {
           inputType: "string",
           name: "uid",
           title: {
-            "default": "Please enter your uid if you are a returning user. Enter zero otherwise"
+            "default": "Please enter your uid if you are a returning user. Enter zero otherwise",
+            "es": "Por favor, introduzca su id unqiue si usted es un usuario que vuelve. Introduzca cero en caso contrario"
           },
           defaultValue: "0",
           isRequired: true

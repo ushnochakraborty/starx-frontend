@@ -35,7 +35,6 @@ async function storeParentSurvey(result, uid){
     }).catch((error) => {
         console.error("Error adding document: ", error);
     });
-    alert("Document written with ID: ", docRef.id);
 }
 
 
