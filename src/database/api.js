@@ -1,10 +1,10 @@
 import {db} from './firebase'
 import {getDocs, addDoc, collection, query, where, getDoc, doc, setDoc, updateDoc, deleteDoc} from 'firebase/firestore'
 
-
-async function storeParentSurvey(result){
+async function storeParentSurvey(result, uid){
     const parentSurveyRef = collection(db, 'parentsurveys')
     const docRef = await addDoc(parentSurveyRef, {
+        uid: uid,
         age: result.patient_dob,
         age_diag: result.patient_dod,
         race: result.patient_race,

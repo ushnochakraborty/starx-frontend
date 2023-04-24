@@ -33,6 +33,7 @@ export default function NewNavBar() {
   },[])
 
   const pages = [
+    [t("home"), "/"],
     [t("about"), "https://www.med.unc.edu/transition/about-us-1/"],
     [
       t("resources"),
