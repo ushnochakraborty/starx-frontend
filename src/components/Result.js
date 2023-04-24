@@ -224,9 +224,6 @@ function Result (props) {
                         </section>
                     </div>
                     <button onClick={createPDF}>Generate PDF</button>
-                    <footer>
-                        <p>Generated on April 14, 2023</p>
-                    </footer>
                 </body>
             </div>
         </Container>
