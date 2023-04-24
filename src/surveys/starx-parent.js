@@ -13,6 +13,16 @@ export const json = {
       elements: [
         {
           type: "text",
+          inputType: "string",
+          name: "uid",
+          title: {
+            "default": "Please enter your uid if you are a returning user. Enter zero otherwise"
+          },
+          defaultValue: "0",
+          isRequired: true
+        },
+        {
+          type: "text",
           inputType: "number",
           name: "patient_dob",
           title: {

@@ -14,11 +14,15 @@ export default function Home() {
   const handleChangeS = () => {
     setCheckedS((prev) => !prev);
   };
-
   const [checkedT, setCheckedT] = React.useState(false);
   const handleChangeT = () => {
     setCheckedT((prev) => !prev);
   };
+  const [checkedD, setCheckedD] = React.useState(false);
+  const handleChangeD = () => {
+    setCheckedD((prev) => !prev);
+  };
+
   return (
     <ThemeProvider theme={theme}>
     <Container disableGutters>
@@ -68,14 +72,14 @@ export default function Home() {
                   <div className="transition-index" >
                     <FormControlLabel 
                       control={
-                        <Box onClick={handleChangeT}>
+                        <Box onClick={handleChangeD}>
                           <VolunteerActivism fontSize="large" style={{color: "white"}}/>
                           <h3 align="center" style={{margin: 0, color: "white"}}>{t("title-transition")}</h3>
                         </Box>
                       }
-                      style={{margin: 0, marginTop: checkedT? 0 : "10%", transition: "0.2s"}}
+                      style={{margin: 0, marginTop: checkedD? 0 : "10%", transition: "0.2s"}}
                     />
-                    <Grow in={checkedT} timeout= {checkedT? 500 : 200}>
+                    <Grow in={checkedD} timeout= {checkedD? 500 : 200}>
                       <Box>
                         <h5 align="center" style={{margin: 0}}>
                           <Link href="/TRxANSITION-adolescent" underline="hover" color="white">{t("adolescent")}</Link>
@@ -90,10 +94,28 @@ export default function Home() {
                     </Grow>
                   </div>
                 </Grid>
-                <Grid item xs={12} sm={6} height="50%" padding="10%" backgroundColor="#519BD0">
+                <Grid item xs={12} sm={6} height={180} padding="5%" backgroundColor="#519BD0">
                   <div className="request-data">
-                    <Poll fontSize="large" style={{color: "white"}}/>
-                    <h3 align="center" style={{margin: 0, color: "white"}}>{t("request-data")}</h3>
+                  <FormControlLabel 
+                      control={
+                        <Box onClick={handleChangeT}>
+                          <VolunteerActivism fontSize="large" style={{color: "white"}}/>
+                          <h3 align="center" style={{margin: 0, color: "white"}}>Request Data</h3>
+                        </Box>
+                      }
+                      style={{margin: 0, marginTop: checkedT? 0 : "10%", transition: "0.2s"}}
+                    />
+                    <Grow in={checkedT} timeout= {checkedT? 500 : 200}>
+                      <Box>
+                        <h5 align="center" style={{margin: 0}}>
+                          <Link href="/Data-portal" underline="hover" color="white">Admin Portal</Link>
+                        </h5>
+                        <h5 align="center" style={{margin: 0}}>
+                          <Link href="/Request-portal" underline="hover" color="white">User Portal</Link>
+                        </h5>
+                      </Box>
+                    </Grow>
+                  
                   </div>
                 </Grid>
                 <Grid item xs={12} sm={6} height="50%" padding="10%" backgroundColor="#6AABDA">

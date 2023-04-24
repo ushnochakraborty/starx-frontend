@@ -45,6 +45,8 @@ function Result (props) {
             datasets: [
                 {
                     labels: "scores",
+                    barPercentage: 0.5,
+                    barThickness: 40,
                     data: [props.scoreData.score1, props.scoreData.score2, props.scoreData.score3]
                 }
             ],
@@ -66,7 +68,7 @@ function Result (props) {
                     display: false,
                     text: 'Chart.js Horizontal Bar Chart'
                 }
-            }
+            },
         })
     }, [])
 
@@ -86,20 +88,24 @@ function Result (props) {
                             <h2>Patient Information</h2>
                             <table>
                                 <tr>
+                                    <th>UID (*Please remember this ID)</th>
+                                    <td>{props.uid}</td>
+                                </tr>
+                                <tr>
                                     <th>Current Age / Age at Diagnosis</th>
-                                    <td>{props.plainData[0].displayValue} / {props.plainData[1].displayValue}</td>
+                                    <td>{props.plainData[1].displayValue} / {props.plainData[2].displayValue}</td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
-                                    <td>{props.plainData[3].displayValue}</td>
+                                    <td>{props.plainData[4].displayValue}</td>
                                 </tr>
                                 <tr>
                                     <th>Race</th>
-                                    <td>{props.plainData[2].displayValue}</td>
+                                    <td>{props.plainData[3].displayValue}</td>
                                 </tr>
                                 <tr>
                                     <th>Number of Medicines</th>
-                                    <td>{props.plainData[4].displayValue}</td>
+                                    <td>{props.plainData[5].displayValue}</td>
                                 </tr>
                             </table>
                         </section>
@@ -131,40 +137,40 @@ function Result (props) {
                             <h2>Section 1 Answers</h2>
                             <table>
                                 <tr>
-                                    <th>1. {props.plainData[5].data[0].title}</th>
-                                    <td>{props.plainData[5].data[0].displayValue}</td>
+                                    <th>1. {props.plainData[6].data[0].title}</th>
+                                    <td>{props.plainData[6].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>2. {props.plainData[5].data[1].title}</th>
-                                    <td>{props.plainData[5].data[1].displayValue}</td>
+                                    <th>2. {props.plainData[6].data[1].title}</th>
+                                    <td>{props.plainData[6].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>3. {props.plainData[5].data[2].title}</th>
-                                    <td>{props.plainData[5].data[2].displayValue}</td>
+                                    <th>3. {props.plainData[6].data[2].title}</th>
+                                    <td>{props.plainData[6].data[2].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>4. {props.plainData[5].data[3].title}</th>
-                                    <td>{props.plainData[5].data[3].displayValue}</td>
+                                    <th>4. {props.plainData[6].data[3].title}</th>
+                                    <td>{props.plainData[6].data[3].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>5. {props.plainData[5].data[4].title}</th>
-                                    <td>{props.plainData[5].data[4].displayValue}</td>
+                                    <th>5. {props.plainData[6].data[4].title}</th>
+                                    <td>{props.plainData[6].data[4].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>6. {props.plainData[5].data[5].title}</th>
-                                    <td>{props.plainData[5].data[5].displayValue}</td>
+                                    <th>6. {props.plainData[6].data[5].title}</th>
+                                    <td>{props.plainData[6].data[5].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>7. {props.plainData[5].data[6].title}</th>
-                                    <td>{props.plainData[5].data[6].displayValue}</td>
+                                    <th>7. {props.plainData[6].data[6].title}</th>
+                                    <td>{props.plainData[6].data[6].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>8. {props.plainData[5].data[7].title}</th>
-                                    <td>{props.plainData[5].data[7].displayValue}</td>
+                                    <th>8. {props.plainData[6].data[7].title}</th>
+                                    <td>{props.plainData[6].data[7].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>9. {props.plainData[5].data[8].title}</th>
-                                    <td>{props.plainData[5].data[8].displayValue}</td>
+                                    <th>9. {props.plainData[6].data[8].title}</th>
+                                    <td>{props.plainData[6].data[8].displayValue}</td>
                                 </tr>
                             </table>
                         </section>
@@ -174,16 +180,16 @@ function Result (props) {
                             <h2>Section 2 Answers</h2>
                             <table>
                                 <tr>
-                                    <th>10. {props.plainData[6].data[0].title}</th>
-                                    <td>{props.plainData[6].data[0].displayValue}</td>
+                                    <th>10. {props.plainData[7].data[0].title}</th>
+                                    <td>{props.plainData[7].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>11. {props.plainData[6].data[1].title}</th>
-                                    <td>{props.plainData[6].data[1].displayValue}</td>
+                                    <th>11. {props.plainData[7].data[1].title}</th>
+                                    <td>{props.plainData[7].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>12. {props.plainData[6].data[2].title}</th>
-                                    <td>{props.plainData[6].data[2].displayValue}</td>
+                                    <th>12. {props.plainData[7].data[2].title}</th>
+                                    <td>{props.plainData[7].data[2].displayValue}</td>
                                 </tr>
                             </table>
                         </section>
@@ -191,28 +197,28 @@ function Result (props) {
                             <h2>Section 3 Answers</h2>
                             <table>
                                 <tr>
-                                    <th>13. {props.plainData[7].data[0].title}</th>
-                                    <td>{props.plainData[7].data[0].displayValue}</td>
+                                    <th>13. {props.plainData[8].data[0].title}</th>
+                                    <td>{props.plainData[8].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>14. {props.plainData[7].data[1].title}</th>
-                                    <td>{props.plainData[7].data[1].displayValue}</td>
+                                    <th>14. {props.plainData[8].data[1].title}</th>
+                                    <td>{props.plainData[8].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>15. {props.plainData[7].data[2].title}</th>
-                                    <td>{props.plainData[7].data[2].displayValue}</td>
+                                    <th>15. {props.plainData[8].data[2].title}</th>
+                                    <td>{props.plainData[8].data[2].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>16. {props.plainData[7].data[3].title}</th>
-                                    <td>{props.plainData[7].data[3].displayValue}</td>
+                                    <th>16. {props.plainData[8].data[3].title}</th>
+                                    <td>{props.plainData[8].data[3].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>17. {props.plainData[7].data[4].title}</th>
-                                    <td>{props.plainData[7].data[4].displayValue}</td>
+                                    <th>17. {props.plainData[8].data[4].title}</th>
+                                    <td>{props.plainData[8].data[4].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>18. {props.plainData[7].data[5].title}</th>
-                                    <td>{props.plainData[7].data[5].displayValue}</td>
+                                    <th>18. {props.plainData[8].data[5].title}</th>
+                                    <td>{props.plainData[8].data[5].displayValue}</td>
                                 </tr>
                             </table>
                         </section>

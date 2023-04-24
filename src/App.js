@@ -16,6 +16,10 @@ import TAdult from "./components/TRxANSITION-adult";
 import TParent from "./components/TRxANSITION-parent";
 import Home from "./components/NewHome";
 import Support from "./components/Support";
+import DataPortal from "./components/DataPortal";
+import Login from "./components/Login";
+import DataRequestForm from "./components/RequestForm";
+import ReqPortal from "./components/ReqPortal";
 import { Suspense } from "react";
 
 const theme = createTheme({
@@ -52,6 +56,8 @@ function App() {
             <Route path="/STARx-adolescent" element={<SAdol />}></Route>
             <Route path="/STARx-parent" element={<SParent />}></Route>
             <Route path="/ESP-STARx-parent" element={<SParentESP />}></Route>
+            <Route path="/Data-portal" element={<DataPortal />} />
+            <Route path="/Request-portal" element={<ReqPortal />} />
           </Routes>
         </BrowserRouter>
       </div>

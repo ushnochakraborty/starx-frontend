@@ -8,6 +8,7 @@ import Result from "./Result"
 import "survey-core/survey.i18n"
 import { useSelector } from "react-redux";
 import { storeParentSurvey } from "../database/api";
+import { nanoid, customAlphabet } from "nanoid"
 
 StylesManager.applyTheme("defaultV2");
 
@@ -16,6 +17,7 @@ function SParent() {
   const [isCompleted, setIsCompleted] = useState(false)
   const [scoreData, setScoreData] = useState([])
   const [plainData, setPlainData] = useState([])
+  const [uid, setUid] = useState("")
 
   const lang = useSelector((state)=>state.lang.value)
 
@@ -26,8 +28,11 @@ function SParent() {
   const handleCompletion = (sender) => {
     setScoreData(sender.data)
     setPlainData(sender.getPlainData())
+    const nanoid = customAlphabet('1234567890', 9)
+    const id = sender.data.uid === "0" ? nanoid() : sender.data.uid
+    setUid(id)
     setIsCompleted(true)
-    storeParentSurvey(sender.data)
+    storeParentSurvey(sender.data, id)
   }
 
   survey.onComplete.add(handleCompletion)
@@ -37,12 +42,11 @@ function SParent() {
       model={survey}
       showCompletedPage={false}
     />
-  ) : (<Result scoreData={scoreData} plainData={plainData}/>)
+  ) : (<Result scoreData={scoreData} plainData={plainData} uid={uid}/>)
 
   return (
     <div>
       {surveyRender}
-      {/* <Result /> */}
     </div>
   );
 }
