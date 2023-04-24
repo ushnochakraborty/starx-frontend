@@ -100,7 +100,7 @@ export default function Home() {
                       control={
                         <Box onClick={handleChangeT}>
                           <VolunteerActivism fontSize="large" style={{color: "white"}}/>
-                          <h3 align="center" style={{margin: 0, color: "white"}}>Request Data</h3>
+                          <h3 align="center" style={{margin: 0, color: "white"}}>{t("request-data")}</h3>
                         </Box>
                       }
                       style={{margin: 0, marginTop: checkedT? 0 : "10%", transition: "0.2s"}}
@@ -108,10 +108,10 @@ export default function Home() {
                     <Grow in={checkedT} timeout= {checkedT? 500 : 200}>
                       <Box>
                         <h5 align="center" style={{margin: 0}}>
-                          <Link href="/Data-portal" underline="hover" color="white">Admin Portal</Link>
+                          <Link href="/Data-portal" underline="hover" color="white">{t("admin-portal")}</Link>
                         </h5>
                         <h5 align="center" style={{margin: 0}}>
-                          <Link href="/Request-portal" underline="hover" color="white">User Portal</Link>
+                          <Link href="/Request-portal" underline="hover" color="white">{t("user-portal")}</Link>
                         </h5>
                       </Box>
                     </Grow>
@@ -121,7 +121,11 @@ export default function Home() {
                 <Grid item xs={12} sm={6} height="50%" padding="10%" backgroundColor="#6AABDA">
                   <div className="contact-us">
                     <PermPhoneMsg fontSize="large" style={{color: "white"}}/>
-                    <h3 align="center" style={{margin: 0, color: "white"}}>{t("contact-us")}</h3>
+                    <h3 align="center" style={{margin: 0, color: "white"}}>
+                      <Link href="https://www.med.unc.edu/transition/about-us-1" underline="hover" color="white">
+                        {t("contact-us")}
+                      </Link>
+                    </h3>
                   </div>
                 </Grid>
               </Grid>
