@@ -113,14 +113,11 @@ export default function NewNavBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    a
-                    href={page[1]}
-                  >
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <a href={page[1]} rel="noopener noreferrer">
                     <Typography textAlign="center">{page[0]}</Typography>
-                  </MenuItem>
+                  </a>
+                </MenuItem>
                 ))}
               </Menu>
             </Box>
