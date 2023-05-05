@@ -85,14 +85,14 @@ export const json = {
             {
               value: 4,
               text: {
-                "deafult": "Native Hawaiian or Other Pacific Islander",
+                "default": "Native Hawaiian or Other Pacific Islander",
                 "es": "Nativo hawaiano u otro isleño del Pacífico",
               }
             },
             {
               value: 5,
               text: {
-                "deafult": "White",
+                "default": "White",
                 "es": "Blanco",
               }
             },

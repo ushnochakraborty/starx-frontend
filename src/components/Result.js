@@ -77,12 +77,12 @@ function Result (props) {
         <Container maxWidth="sm">
             <div className="Result">
                 <head>
-                    <title>Medical Report</title>
+                    <title>STARx Survey Report</title>
                 </head>
                 <body>
-                    <div id="info">
+                    <div class="info">
                         <header>
-                            <h1>Medical Report</h1>
+                            <h1>STARx Survey Report</h1>
                         </header>
                         <section>
                             <h2>Patient Information</h2>
@@ -132,7 +132,7 @@ function Result (props) {
                             <Bar options={chartOptions} data={chartData}/>
                         </section>
                     </div>
-                    <div id="section1">
+                    <div class="section1">
                         <section>
                             <h2>Section 1 Answers</h2>
                             <table>
@@ -175,7 +175,7 @@ function Result (props) {
                             </table>
                         </section>
                     </div>
-                    <div id="section23">
+                    <div class="section23">
                         <section>
                             <h2>Section 2 Answers</h2>
                             <table>
@@ -223,7 +223,11 @@ function Result (props) {
                             </table>
                         </section>
                     </div>
-                    <button onClick={createPDF}>Generate PDF</button>
+                    <div class="pdf-container">
+                        <button class="generate-pdf-btn" onClick={createPDF}>
+                            Generate PDF
+                        </button>
+                    </div>
                 </body>
             </div>
         </Container>
