@@ -12,9 +12,9 @@ function Result (props) {
 
     const createPDF = async () => {   
         const pdf = new jsPDF("portrait", "pt", "a4"); 
-        const info = await html2canvas(document.querySelector("#info"));
-        const section1 = await html2canvas(document.querySelector("#section1"));
-        const section23 = await html2canvas(document.querySelector("#section23"));
+        const info = await html2canvas(document.querySelector(".info"));
+        const section1 = await html2canvas(document.querySelector(".section1"));
+        const section23 = await html2canvas(document.querySelector(".section23"));
         const img1 = info.toDataURL("image/png");  
         const img2 = section1.toDataURL("image/png")
         const img3 = section23.toDataURL("image/png")
@@ -36,7 +36,7 @@ function Result (props) {
         pdf.addImage(img2, "PNG", margins.left, margins.top, pdfWidth - margins.left - margins.right, pdfHeight2 - margins.top);
         pdf.addPage()
         pdf.addImage(img3, "PNG", margins.left, margins.top, pdfWidth - margins.left - margins.right, pdfHeight3 - margins.top);
-        pdf.save("document.pdf");
+        pdf.save("STARx Survey Report.pdf");
     };
 
     useEffect(() => {
@@ -92,7 +92,7 @@ function Result (props) {
                                     <td>{props.uid}</td>
                                 </tr>
                                 <tr>
-                                    <th>Current Age / Age at Diagnosis</th>
+                                    <th>Year of Birth / Age at Diagnosis</th>
                                     <td>{props.plainData[1].displayValue} / {props.plainData[2].displayValue}</td>
                                 </tr>
                                 <tr>
@@ -141,36 +141,36 @@ function Result (props) {
                                     <td>{props.plainData[6].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>2. {props.plainData[6].data[1].title}</th>
-                                    <td>{props.plainData[6].data[1].displayValue}</td>
+                                    <th>2. {props.plainData[7].data[0].title}</th>
+                                    <td>{props.plainData[7].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>3. {props.plainData[6].data[2].title}</th>
-                                    <td>{props.plainData[6].data[2].displayValue}</td>
+                                    <th>3. {props.plainData[8].data[0].title}</th>
+                                    <td>{props.plainData[8].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>4. {props.plainData[6].data[3].title}</th>
-                                    <td>{props.plainData[6].data[3].displayValue}</td>
+                                    <th>4. {props.plainData[8].data[1].title}</th>
+                                    <td>{props.plainData[8].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>5. {props.plainData[6].data[4].title}</th>
-                                    <td>{props.plainData[6].data[4].displayValue}</td>
+                                    <th>5. {props.plainData[9].data[0].title}</th>
+                                    <td>{props.plainData[9].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>6. {props.plainData[6].data[5].title}</th>
-                                    <td>{props.plainData[6].data[5].displayValue}</td>
+                                    <th>6. {props.plainData[9].data[1].title}</th>
+                                    <td>{props.plainData[9].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>7. {props.plainData[6].data[6].title}</th>
-                                    <td>{props.plainData[6].data[6].displayValue}</td>
+                                    <th>7. {props.plainData[10].data[0].title}</th>
+                                    <td>{props.plainData[10].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>8. {props.plainData[6].data[7].title}</th>
-                                    <td>{props.plainData[6].data[7].displayValue}</td>
+                                    <th>8. {props.plainData[11].data[0].title}</th>
+                                    <td>{props.plainData[11].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>9. {props.plainData[6].data[8].title}</th>
-                                    <td>{props.plainData[6].data[8].displayValue}</td>
+                                    <th>9. {props.plainData[12].data[0].title}</th>
+                                    <td>{props.plainData[12].data[0].displayValue}</td>
                                 </tr>
                             </table>
                         </section>
@@ -180,16 +180,16 @@ function Result (props) {
                             <h2>Section 2 Answers</h2>
                             <table>
                                 <tr>
-                                    <th>10. {props.plainData[7].data[0].title}</th>
-                                    <td>{props.plainData[7].data[0].displayValue}</td>
+                                    <th>10. {props.plainData[13].data[0].title}</th>
+                                    <td>{props.plainData[13].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>11. {props.plainData[7].data[1].title}</th>
-                                    <td>{props.plainData[7].data[1].displayValue}</td>
+                                    <th>11. {props.plainData[13].data[1].title}</th>
+                                    <td>{props.plainData[13].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>12. {props.plainData[7].data[2].title}</th>
-                                    <td>{props.plainData[7].data[2].displayValue}</td>
+                                    <th>12. {props.plainData[14].data[0].title}</th>
+                                    <td>{props.plainData[14].data[0].displayValue}</td>
                                 </tr>
                             </table>
                         </section>
@@ -197,28 +197,28 @@ function Result (props) {
                             <h2>Section 3 Answers</h2>
                             <table>
                                 <tr>
-                                    <th>13. {props.plainData[8].data[0].title}</th>
-                                    <td>{props.plainData[8].data[0].displayValue}</td>
+                                    <th>13. {props.plainData[15].data[0].title}</th>
+                                    <td>{props.plainData[15].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>14. {props.plainData[8].data[1].title}</th>
-                                    <td>{props.plainData[8].data[1].displayValue}</td>
+                                    <th>14. {props.plainData[15].data[1].title}</th>
+                                    <td>{props.plainData[15].data[1].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>15. {props.plainData[8].data[2].title}</th>
-                                    <td>{props.plainData[8].data[2].displayValue}</td>
+                                    <th>15. {props.plainData[15].data[2].title}</th>
+                                    <td>{props.plainData[15].data[2].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>16. {props.plainData[8].data[3].title}</th>
-                                    <td>{props.plainData[8].data[3].displayValue}</td>
+                                    <th>16. {props.plainData[16].data[0].title}</th>
+                                    <td>{props.plainData[16].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>17. {props.plainData[8].data[4].title}</th>
-                                    <td>{props.plainData[8].data[4].displayValue}</td>
+                                    <th>17. {props.plainData[17].data[0].title}</th>
+                                    <td>{props.plainData[17].data[0].displayValue}</td>
                                 </tr>
                                 <tr>
-                                    <th>18. {props.plainData[8].data[5].title}</th>
-                                    <td>{props.plainData[8].data[5].displayValue}</td>
+                                    <th>18. {props.plainData[17].data[1].title}</th>
+                                    <td>{props.plainData[17].data[1].displayValue}</td>
                                 </tr>
                             </table>
                         </section>

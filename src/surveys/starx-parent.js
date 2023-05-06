@@ -16,42 +16,299 @@ export const json = {
           inputType: "string",
           name: "uid",
           title: {
-            "default": "Please enter your uid if you are a returning user. Enter zero otherwise",
-            "es": "Por favor, introduzca su id unqiue si usted es un usuario que vuelve. Introduzca cero en caso contrario"
+            "default": "Please enter your 9-digit unique ID if you are a returning user. Enter zero otherwise",
+            "es": "Introduzca su ID único de 9 dígitos si es un usuario recurrente. En caso contrario, introduzca cero"
           },
           defaultValue: "0",
           isRequired: true
         },
         {
-          type: "text",
+          type: "dropdown",
           inputType: "number",
           name: "patient_dob",
           title: {
             "default": "Please enter your child's age",
             "es": "Introduzca la edad de su hijo"
           },
-          min: 0,
-          max: 90,
           isRequired: true,
+          choices: [1901,
+            1902,
+            1903,
+            1904,
+            1905,
+            1906,
+            1907,
+            1908,
+            1909,
+            1910,
+            1911,
+            1912,
+            1913,
+            1914,
+            1915,
+            1916,
+            1917,
+            1918,
+            1919,
+            1920,
+            1921,
+            1922,
+            1923,
+            1924,
+            1925,
+            1926,
+            1927,
+            1928,
+            1929,
+            1930,
+            1931,
+            1932,
+            1933,
+            1934,
+            1935,
+            1936,
+            1937,
+            1938,
+            1939,
+            1940,
+            1941,
+            1942,
+            1943,
+            1944,
+            1945,
+            1946,
+            1947,
+            1948,
+            1949,
+            1950,
+            1951,
+            1952,
+            1953,
+            1954,
+            1955,
+            1956,
+            1957,
+            1958,
+            1959,
+            1960,
+            1961,
+            1962,
+            1963,
+            1964,
+            1965,
+            1966,
+            1967,
+            1968,
+            1969,
+            1970,
+            1971,
+            1972,
+            1973,
+            1974,
+            1975,
+            1976,
+            1977,
+            1978,
+            1979,
+            1980,
+            1981,
+            1982,
+            1983,
+            1984,
+            1985,
+            1986,
+            1987,
+            1988,
+            1989,
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023]
         },
         {
-          type: "text",
+          type: "dropdown",
           inputType: "number",
           name: "patient_dod",
           title: {
             "default": "Please enter your child's age of diagnosis",
-            "es": "Por favor, introduzca la edad de diagnóstico de su hijo"
+            "es": "Ingrese la edad de diagnóstico de su hijo"
           },
-          min: 0,
-          max: 90,
           isRequired: true,
+          choices: [
+            {
+              value: -1,
+              text: {
+                "default": "Before birth",
+                "es": "Antes del nacimiento"
+              }
+            },
+            {
+              value: 0,
+              text: {
+                "default": "Less than one year of age",
+                "es": "Menos de un año de edad"
+              }
+            },
+            1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+69,
+70,
+71,
+72,
+73,
+74,
+75,
+76,
+77,
+78,
+79,
+80,
+81,
+82,
+83,
+84,
+85,
+86,
+87,
+88,
+89,
+90,
+91,
+92,
+93,
+94,
+95,
+96,
+97,
+98,
+99,
+100,
+101,
+102,
+103,
+104,
+105,
+106,
+107,
+108,
+109,
+110,
+111,
+112,
+113,
+114,
+115,
+116,
+117,
+118,
+119,
+120,
+121,
+122
+          ]
         },
         {
           type: "dropdown",
           name: "patient_race",
           title: {
             "default": "Please enter your child's race",
-            "es": "Por favor ingrese la raza de su hijo"
+            "es": "Ingrese la carrera de su hijo"
           },
           choices: [
             {
@@ -169,318 +426,753 @@ export const json = {
       name: "page2",
       elements: [
         {
-          type: "matrix",
+          type: "panel",
           name: "section1",
           title:{
-            "default": "Please check the one that shows how often you have done each thing in the past 3 months.",
-            "es": "Por favor marque la frecuencia en cada situación durante los últimos 3 meses.",
+            "default": "Please check the one that shows how often your child has done each thing in the past 3 months. ",
+            "es": "Marque el que muestra con qué frecuencia su hijo ha hecho cada cosa en los últimos 3 meses.",
           },
-          columns: [
+          elements: [
             {
-              value: 1,
-              text: {
-                "default": "Never",
-                "es": "Nunca",
-              },            },
-            {
-              value: 2,
-              text: {
-                "default": "Almost Never",
-                "es": "Casi nunca",
-              },
+              type: "matrix",
+              name: "q1-1",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+              ],
+              rows: [
+                {
+                  value: "q1",
+                  text:{
+                    "default": "How often did your child make an effort to understand what his/her doctor told them?",
+                    "es": "¿Con qué frecuencia se esforzaba su hijo por entender lo que le decía su médico?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 3,
-              text: {
-                "default": "Sometimes",
-                "es": "A veces",
-              },
+              type: "matrix",
+              name: "q2-2",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+                {
+                  value: 0,
+                  text: {
+                    "default": "Not needed for my child’s care",
+                    "es": "No es necesario para el cuidado de mi hijo",
+                  }, 
+                },
+              ],
+              rows: [
+                {
+                  value: "q2",
+                  text: {
+                    "default": "How often did your child take his/her medicines on their own?",
+                    "es": "¿Con qué frecuencia tomaba su hijo los medicamentos por sí solo?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 4,
-              text: {
-                "default": "Almost Always",
-                "es": "Casi siempre",
-              }
+              type: "matrix",
+              name: "q3-4",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+              ],
+              rows: [
+                {
+                  value: "q3",
+                  text: {
+                    "default": "How often did your child ask his/her doctor or nurse questions about their illness, medicines or medical care?",
+                    "es": "¿Con qué frecuencia hacía su hijo preguntas a su médico o enfermera sobre su enfermedad, medicamentos o atención médica?",
+                  },
+                },
+                {
+                  value: "q4",
+                  text: {
+                    "default": "How often did your child make their own appointments?",
+                    "es": "¿Con qué frecuencia concertaba su hijo sus propias citas?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 5,
-              text: {
-                "default": "Always",
-                "es": "Siempre",
-              },
+              type: "matrix",
+              name: "q5-6",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+                {
+                  value: 0,
+                  text: {
+                    "default": "Not needed for my child’s care",
+                    "es": "No es necesario para el cuidado de mi hijo",
+                  }, 
+                },
+              ],
+              rows: [
+                {
+                  value: "q5",
+                  text: {
+                    "default": "How often did your child need someone to remind him/her to take their medicines?",
+                    "es": "¿Con qué frecuencia necesitaba su hijo que alguien le recordara que debía tomar sus medicamentos?"
+                  },
+                },
+                {
+                  value: "q6",
+                  text: {
+                    "default": "How often did your child use things likes pillboxes, schedules, or alarm clocks to help him/her take their medicines when they were supposed to?",
+                    "es": "¿Con qué frecuencia utilizaba su hijo/a cosas como pastilleros, horarios o despertadores para ayudarse a tomar sus medicamentos cuando debía?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 5,
-              text: {
-                "default": "I do not take any medicine",
-                "es": "No tomo ningún medicamento",
-              }, 
-            },
-          ],
-          rows: [
-            {
-              value: "q1",
-              text:{
-                "default": "How often did your child make an effort to understand what his/her doctor told them?",
-                "es": "¿Con qué frecuencia trató su hijo de entender lo que decían sus médicos?",
-              },
-            },
-            {
-              value: "q2",
-              text: {
-                "default": "How often did your child take his/her medicines on your own?",
-                "es": "¿Con qué frecuencia toma las medicinas por su cuenta?",
-              },
-            },
-            {
-              value: "q3",
-              text: {
-                "default": "How often did your child ask his/her doctor or nurse questions about their illness, medicines or medical care?",
-                "es": "¿Con qué frecuencia hace preguntas a su médico/enfermera/equipo de salud sobre su enfermedad, medicinas o atención médica?",
-              },
-            },
-            {
-              value: "q4",
-              text: {
-                "default": "How often did your child make their own appointments?",
-                "es": "¿Con qué frecuencia solicita sus propias citas?",
-              },
-            },
-            {
-              value: "q5",
-              text: {
-                "default": "How often did your child need someone to remind him/her to take their medicines?",
-                "es": "¿Con qué frecuencia necesita a alguien para recordarle a tomar sus medicinas?"
-              },
-            },
-            {
-              value: "q6",
-              text: {
-                "default": "How often did your child use things like pillboxes, schedules, or alarm to help him/her take their medicines when they were supposed to?",
-                "es": "¿Con qué frecuencia usa cosas como cajas para pastillas, calendarios o alarmas para ayudarle a recordar a tomar sus medicinas?",
-              },
-            },
-            {
-              value: "q7",
-              text: {
-                "default": "How often did you use the internet, books or other guides to find out more about his/her illness?",
-                "es": "¿Con qué frecuencia usa el Internet, libros u otras guías para averiguar más sobre su enfermedad?",
-              },
+              type: "matrix",
+              name: "q7-7",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+              ],
+              rows: [
+                {
+                  value: "q7",
+                  text: {
+                    "default": "How often did your child use the internet, books or other guides to find out more about his/her illness?",
+                    "es": "¿Con qué frecuencia utilizó su hijo Internet, libros u otras guías para informarse sobre su enfermedad?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: "q8",
-              text: {
-                "default": "How often did your child forget to take his/her medicines?",
-                "es": "¿Con qué frecuencia olvida tomar sus medicinas?",
-              },
+              type: "matrix",
+              name: "q8-8",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+                {
+                  value: 0,
+                  text: {
+                    "default": "Not needed for my child’s care",
+                    "es": "No es necesario para el cuidado de mi hijo",
+                  }, 
+                },
+              ],
+              rows: [
+                {
+                  value: "q8",
+                  text: {
+                    "default": "How often did your child forget to take his/her medicines?",
+                    "es": "¿Con qué frecuencia olvidaba su hijo tomar sus medicamentos?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: "q9",
-              text: {
-                "default": "How often did your child work with his/her doctor to take care of new health problems that came up?",
-                "es": "¿Con qué frecuencia discute o pregunta a su médico para ocuparse el manejo de nuevos problemas de salud que surgieron?",
-              },
+              type: "matrix",
+              name: "q9-9",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Never",
+                    "es": "Nunca",
+                  },            },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Almost Never",
+                    "es": "Casi nunca",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Sometimes",
+                    "es": "A veces",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Almost Always",
+                    "es": "Casi siempre",
+                  }
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Always",
+                    "es": "Siempre",
+                  },
+                },
+              ],
+              rows: [
+                {
+                  value: "q9",
+                  text: {
+                    "default": "How often did your child work with his/her doctor to take care of new health problems that came up?",
+                    "es": "¿Con qué frecuencia colaboraba su hijo con su médico para tratar los nuevos problemas de salud que le surgían?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
-          ],
-          alternateRows: true,
-          isAllRowRequired: true,
+          ]
         },
         {
-          type: "matrix",
+          type: "panel",
           name: "section2",
-          title: {
-            "default": "Some patients know a lot about their heatlh and some patients do not. How much do you konw? Please check the best answer.",
-            "es": "Algunos pacientes saben mucho acerca de su salud y algunos no saben mucho. Por favor marque la repuesta que describe mejor su situación HOY.",
+          title:{
+            "default": "Some patients know a lot about their health and some patients do not. How much does your child know? Please check the answer that describes your child most.",
+            "es": "Algunos pacientes saben mucho sobre su salud y otros no. ¿Cuánto sabe su hijo? Marque la respuesta que mejor describa a su hijo.",
           },
-          columns: [
+          elements: [
             {
-              value: 1,
-              text: {
-                "default": "Nothing",
-                "es": "Nada",
-              },
+              type: "matrix",
+              name: "q10-11",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Nothing",
+                    "es": "Nada",
+                  },
+                },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Not Much",
+                    "es": "Muy poco",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "A Little",
+                    "es": "Poco",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Some",
+                    "es": "Algo",
+                  },
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "A Lot",
+                    "es": "Mucho",
+                  },
+                },
+              ],
+              rows: [
+                {
+                  value: "q10",
+                  text: {
+                    "default": "How much does your child know about his/her illness?",
+                    "es": "¿Cuánto sabe su hijo sobre su enfermedad?",
+                  },
+                },
+                {
+                  value: "q11",
+                  text: {
+                    "default": "How much does your child know about taking care of his/her illness?",
+                    "es": "¿Cuánto sabe tu hijo sobre cómo cuidar de su enfermedad?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 2,
-              text: {
-                "default": "Not Much",
-                "es": "Muy poco",
-              },
+              type: "matrix",
+              name: "q12-12",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Nothing",
+                    "es": "Nada",
+                  },
+                },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Not Much",
+                    "es": "Muy poco",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "A Little",
+                    "es": "Poco",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Some",
+                    "es": "Algo",
+                  },
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "A Lot",
+                    "es": "Mucho",
+                  },
+                },
+                {
+                  value: 0,
+                  text: {
+                    "default": "Not needed for my child’s care",
+                    "es": "No es necesario para el cuidado de mi hijo",
+                  }, 
+                },               
+              ],
+              rows: [
+                {
+                  value: "q12",
+                  text: {
+                    "default": "How much does your child know about what will happen if he/she does not take their medicines?",
+                    "es": "¿Cuánto sabe su hijo sobre lo que le ocurrirá si no toma sus medicamentos?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
-            {
-              value: 3,
-              text: {
-                "default": "A Little",
-                "es": "Poco",
-              },
-            },
-            {
-              value: 4,
-              text: {
-                "default": "Some",
-                "es": "Algo",
-              },
-            },
-            {
-              value: 5,
-              text: {
-                "default": "A Lot",
-                "es": "Mucho",
-              },
-            },
-            {
-              value: 5,
-              text: {
-                "default": "I do not take any medicine",
-                "es": "No tomo ningún medicamento",
-              }, 
-            },
-          ],
-          rows: [
-            {
-              value: "q10",
-              text: {
-                "default": "How much do your child know about his/her illness?",
-                "es": "¿Cuánto sabe acerca de su enfermedad?",
-              },
-            },
-            {
-              value: "q11",
-              text: {
-                "default": "How much do your child know about taking care of his/her illness?",
-                "es": "¿Cuánto sabe sobre el cuidado de su enfermedad?",
-              },
-            },
-            {
-              value: "q12",
-              text: {
-                "default": "How much do your child know about what will happen if he/she do not take their medicine?",
-                "es": "¿Cuánto sabe de lo que pasaría si no se toma sus medicinas?",
-              },
-            },
-          ],
-          alternateRows: true,
-          isAllRowRequired: true,
+          ]
         },
         {
-          type: "matrix",
+          type: "panel",
           name: "section3",
-          title: {
-            "default": "Some patients may find it hard to do certain things. Please check what best describes how easy or hard you feel it would be for you.",
-            "es": "Ciertas cosas son difíciles de hacer para algunos pacientes. ¿Qué tan fácil o difícil es hacer las siguientes cosas? Por favor marque la mejor respuesta que le describe HOY.",
+          title:{
+            "default": "Some patients may find it hard to do certain things. Please check what best describes how easy or hard you feel this is/will be for your child. ",
+            "es": "A algunos pacientes les puede resultar difícil hacer ciertas cosas. Por favor, marque lo que mejor describa lo fácil o difícil que cree que esto es/será para su hijo.",
           },
-          columns: [
+          elements: [
             {
-              value: 1,
-              text: {
-                "default": "Very Hard",
-                "es": "Muy difícil",
-              },
+              type: "matrix",
+              name: "q13-15",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Very Hard",
+                    "es": "Muy difícil",
+                  },
+                },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Somewhat Hard",
+                    "es": "Algo difícil",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Neither Hard nor Easy",
+                    "es": "Más o Menos",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Somewhat Easy",
+                    "es": "Algo fácil",
+                  },
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Very Easy",
+                    "es": "Muy fácil",
+                  },
+                },               
+              ],
+              rows: [
+                {
+                  value: "q13",
+                  text: {
+                    "default": "How easy or hard is it for your child to talk to his/her doctor?",
+                    "es": "¿Qué tan fácil o difícil es para su hijo hablar con su médico?",
+                  },
+                },
+                {
+                  value: "q14",
+                  text: {
+                    "default": "How easy or hard is it for your child to make a plan with his/her doctor to care for his/her health?",
+                    "es": "¿Qué tan fácil o difícil es para su hijo hacer un plan con su médico para cuidar su salud?",
+                  },
+                },
+                {
+                  value: "q15",
+                  text: {
+                    "default": "How easy or hard is it for your child to see his/her doctor by himself or herself?",
+                    "es": "¿Qué tan fácil o difícil es para su hijo ver a su médico por sí mismo?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 2,
-              text: {
-                "default": "Somewhat Hard",
-                "es": "Algo difícil",
-              },
+              type: "matrix",
+              name: "q16-16",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Very Hard",
+                    "es": "Muy difícil",
+                  },
+                },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Somewhat Hard",
+                    "es": "Algo difícil",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Neither Hard nor Easy",
+                    "es": "Más o Menos",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Somewhat Easy",
+                    "es": "Algo fácil",
+                  },
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Very Easy",
+                    "es": "Muy fácil",
+                  },
+                },   
+                {
+                  value: 0,
+                  text: {
+                    "default": "Not needed for my child’s care",
+                    "es": "No es necesario para el cuidado de mi hijo",
+                  }, 
+                },            
+              ],
+              rows: [
+                {
+                  value: "q16",
+                  text: {
+                    "default": "How easy or hard is it for your child to take his/her medicines like they are supposed to?",
+                    "es": "¿Qué tan fácil o difícil es para su hijo tomar sus medicamentos como se supone que deben hacerlo?",
+                  },
+                },               
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
             {
-              value: 3,
-              text: {
-                "default": "Neither Hard nor Easy",
-                "es": "Más o Menos",
-              },
+              type: "matrix",
+              name: "q17-18",
+              columns: [
+                {
+                  value: 1,
+                  text: {
+                    "default": "Very Hard",
+                    "es": "Muy difícil",
+                  },
+                },
+                {
+                  value: 2,
+                  text: {
+                    "default": "Somewhat Hard",
+                    "es": "Algo difícil",
+                  },
+                },
+                {
+                  value: 3,
+                  text: {
+                    "default": "Neither Hard nor Easy",
+                    "es": "Más o Menos",
+                  },
+                },
+                {
+                  value: 4,
+                  text: {
+                    "default": "Somewhat Easy",
+                    "es": "Algo fácil",
+                  },
+                },
+                {
+                  value: 5,
+                  text: {
+                    "default": "Very Easy",
+                    "es": "Muy fácil",
+                  },
+                },               
+              ],
+              rows: [
+                {
+                  value: "q17",
+                  text: {
+                    "default": "How easy or hard is it for your child to take care of himself/herself?",
+                    "es": "¿Qué tan fácil o difícil es para su hijo cuidar de sí mismo?",
+                  },
+                },
+                {
+                  value: "q18",
+                  text: {
+                    "default": "How easy or hard do you think it will be for your child to move from pediatrics to adult-focused care?",
+                    "es": "¿Qué tan fácil o difícil cree que será para su hijo pasar de la pediatría a la atención enfocada en adultos?",
+                  },
+                },
+              ],
+              alternateRows: true,
+              isAllRowRequired: true,
             },
-            {
-              value: 4,
-              text: {
-                "default": "Somewhat Easy",
-                "es": "Algo fácil",
-              },
-            },
-            {
-              value: 5,
-              text: {
-                "default": "Very Easy",
-                "es": "Muy fácil",
-              },
-            },
-            {
-              value: 5,
-              text: {
-                "default": "I do not take any medicine",
-                "es": "No tomo ningún medicamento",
-              }, 
-            },
-          ],
-          rows: [
-            {
-              value: "q13",
-              text: {
-                "default": "How easy or hard is it for your child to talk to his/her doctor?",
-                "es": "¿Qué tan fácil o difícil es hablar con su médico?",
-              },
-            },
-            {
-              value: "q14",
-              text: {
-                "default": "How easy or hard is it for your child to make a plan with his/her doctor to care for your health?",
-                "es": "¿Qué tan fácil o difícil es hacer un plan de tratamiento con su médico para cuidar por su salud?",
-              },
-            },
-            {
-              value: "q15",
-              text: {
-                "default": "How easy or hard is it for your child see his/her doctor by himself or herself?",
-                "es": "¿Qué tan fácil o difícil es ver a su médico usted mismo(a) solo(a), sin sus padres?",
-              },
-            },
-            {
-              value: "q16",
-              text: {
-                "default": "How easy or hard is it for your child to take his/her medicines the way they are supposed to be taken?",
-                "es": "¿Qué tan fácil o difícil es tomar sus medicinas en la manera y tiempo correctos?",
-              },
-            },
-            {
-              value: "q17",
-              text: {
-                "default": "How easy or hard is it for your child to take care of himself/herself?",
-                "es": "¿Qué tan fácil o difícil es cuidar por usted mismo(a)?",
-              },
-            },
-            {
-              value: "q18",
-              text: {
-                "default": "How easy or hard do your child think it will be for you to move from pediatrics to adult-focused care?",
-                "es": "¿Qué tan fácil o difícil será hacer un transición/cambio hacia los médicos de adultos?",
-              },
-            },
-          ],
-        },
+          ]
+        }
       ],
-    },
+    }
   ],
-  showQuestionNumbers: "on",
+
+
+  showQuestionNumbers: "off",
   calculatedValues: [
     {
       name: "score1",
       expression:
-        "{section1.q5} + {section2.q10} + {section2.q11} + {section2.q12}",
+        "{q5-6.q5} + {q10-11.q10} + {q10-11.q11} + {q12-12.q12}",
         includeIntoResult: true,
     },
     {
       name: "score2",
-      expression: "{section1.q1} + {section1.q8} + {section3.q16} + {section3.q17} + {section3.q18}",
+      expression: "{q1-1.q1} + {q8-8.q8} + {q16-16.q16} + {q17-18.q17} + {q17-18.q18}",
       includeIntoResult: true,
     },
     {
       name: "score3",
-      expression: "{section1.q9} + {section3.q13} + {section3.q14} + {section3.q15}",
+      expression: "{q9-9.q9} + {q13-15.q13} + {q13-15.q14} + {q13-15.q15}",
       includeIntoResult: true,
     }
   ],
   completedHtml:
-    "<h2>Thank you for completing the survey</h2></br><h2>Your child's readiness score is {score} </h2> </br> <h2> Contact your provider to interpret this score. </h2> </br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
+    "<h2>Thank you for completing the survey</h2></br><h2>Your readiness score is {score} </h2> </br> <h2> Contact your provider to interpret this score. </h2> </br><h2>For resources on how to improve your skills, visit <a href = https://www.med.unc.edu/transition/transition-tools/copy_of_educational-handouts-for-trxansition-indextm/>our resources page</a></h2>",
 };
