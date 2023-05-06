@@ -25,6 +25,7 @@ import { useDispatch } from "react-redux";
 export default function NewNavBar() {
   const { i18n, t } = useTranslation(["navbar"])
   const dispatch = useDispatch()
+  const [language, setLanguage] = useState(i18n.language);
 
   useEffect(()=>{
     if(localStorage.getItem("i18nextLng")?.length>2){
@@ -52,10 +53,17 @@ export default function NewNavBar() {
     setAnchorElNav(null);
   };
 
+  // const handleChangeLang = (event) => {
+  //   i18n.changeLanguage(event.target.value)
+  //   dispatch(changeLang(event.target.value))
+  // }
+
   const handleChangeLang = (event) => {
-    i18n.changeLanguage(event.target.value)
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
     dispatch(changeLang(event.target.value))
-  }
+  };
 
   const theme = createTheme({
     palette: {
@@ -144,7 +152,7 @@ export default function NewNavBar() {
               ))}
               <Select
                 id="demo-simple-select"
-                value={localStorage.getItem("i18nextLng")}
+                value={language}
                 onChange={handleChangeLang}
                 variant="standard"
                 IconComponent={0}
