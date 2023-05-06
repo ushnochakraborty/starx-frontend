@@ -16,6 +16,11 @@ import TAdult from "./components/TRxANSITION-adult";
 import TParent from "./components/TRxANSITION-parent";
 import Home from "./components/NewHome";
 import Support from "./components/Support";
+import DataPortal from "./components/DataPortal";
+import Login from "./components/Login";
+import DataRequestForm from "./components/RequestForm";
+import ReqPortal from "./components/ReqPortal";
+import { Suspense } from "react";
 
 const theme = createTheme({
   palette: {
@@ -32,27 +37,31 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <NewNavBar />
-      </ThemeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/Support" element={<Support />}></Route>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/TRxANSITION-adolescent" element={<TAdol />}></Route>
-          <Route path="/TRxANSITION-adult" element={<TAdult />}></Route>
-          <Route path="/TRxANSITION-parent" element={<TParent />}></Route>
-          <Route path="/ESP-STARx-adult" element={<SAdultESP />}></Route>
-          <Route path="/STARx-adult" element={<SAdult />}></Route>
-          <Route path="/ESP-STARx-adolescent" element={<SAdolESP />}></Route>
-          <Route path="/STARx-adolescent" element={<SAdol />}></Route>
-          <Route path="/STARx-parent" element={<SParent />}></Route>
-          <Route path="/ESP-STARx-parent" element={<SParentESP />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Suspense fallback={null}>
+      <div>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <NewNavBar />
+        </ThemeProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/Support" element={<Support />}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/TRxANSITION-adolescent" element={<TAdol />}></Route>
+            <Route path="/TRxANSITION-adult" element={<TAdult />}></Route>
+            <Route path="/TRxANSITION-parent" element={<TParent />}></Route>
+            <Route path="/ESP-STARx-adult" element={<SAdultESP />}></Route>
+            <Route path="/STARx-adult" element={<SAdult />}></Route>
+            <Route path="/ESP-STARx-adolescent" element={<SAdolESP />}></Route>
+            <Route path="/STARx-adolescent" element={<SAdol />}></Route>
+            <Route path="/STARx-parent" element={<SParent />}></Route>
+            <Route path="/ESP-STARx-parent" element={<SParentESP />}></Route>
+            <Route path="/Data-portal" element={<DataPortal />} />
+            <Route path="/Request-portal" element={<ReqPortal />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </Suspense>
   );
 }
 
