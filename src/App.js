@@ -20,8 +20,7 @@ import DataPortal from "./components/DataPortal";
 import Login from "./components/Login";
 import DataRequestForm from "./components/RequestForm";
 import ReqPortal from "./components/ReqPortal";
-import { Suspense, useEffect, useState } from "react";
-import Cookies from 'js-cookie';
+import { Suspense } from "react";
 
 const theme = createTheme({
   palette: {
@@ -37,28 +36,12 @@ const theme = createTheme({
 });
 
 function App() {
-  const [lang, setLang] = useState(Cookies.get('language') || 'en'); // get the language value from the cookies or set it to 'en'
-  
-  useEffect(() => {
-    const storedLang = Cookies.get('lang');
-    if (storedLang) {
-      setLang(storedLang);
-    } else {
-      Cookies.set('lang', lang, { expires: 365 });
-    }
-  }, []);
-
-  const handleLangChange = (event, value) => {
-    setLang(value);
-    Cookies.set('lang', value, { expires: 365 });
-  };
-  
   return (
     <Suspense fallback={null}>
       <div>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <NewNavBar lang={lang} handleLangChange={handleLangChange} />
+          <NewNavBar />
         </ThemeProvider>
         <BrowserRouter>
           <Routes>

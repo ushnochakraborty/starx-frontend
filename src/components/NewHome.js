@@ -55,17 +55,14 @@ export default function Home() {
                     />
                     <Grow in={checkedS} timeout= {checkedS? 500 : 200}>
                       <Box>
-                      <h5 align="center" style={{ margin: 0 }}>
-                          <Link href={i18n.language === "es" ? "/ESP-STARx-adolescent" : "/STARx-adolescent"} underline="hover" color="white">{t("adolescent")}</Link>
+                        <h5 align="center" style={{margin: 0}}>
+                          <Link href="/STARx-adolescent" underline="hover" color="white">{t("adolescent")}</Link>
                         </h5>
-                        <h5 align="center" style={{ margin: 0 }}>
-                          <Link href={i18n.language === "es" ? "/ESP-STARx-adult" : "/STARx-adult"} underline="hover" color="white">{t("adult")}</Link>
+                        <h5 align="center" style={{margin: 0}}>
+                          <Link href="/STARx-adult" underline="hover" color="white">{t("adult")}</Link>
                         </h5>
-                        {/* <h5 align="center" style={{margin: 0}}>
+                        <h5 align="center" style={{margin: 0}}>
                           <Link href="/STARx-parent" underline="hover" color="white">{t("parent")}</Link>
-                        </h5> */}
-                        <h5 align="center" style={{ margin: 0 }}>
-                          <Link href={i18n.language === "es" ? "/ESP-STARx-parent" : "/STARx-parent"} underline="hover" color="white">{t("parent")}</Link>
                         </h5>
                       </Box>
                     </Grow>
