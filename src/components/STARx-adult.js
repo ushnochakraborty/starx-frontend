@@ -23,19 +23,11 @@ function SAdult() {
 
   const lang = useSelector((state)=>state.lang.value)
 
-  useEffect(()=>{
-      survey.locale = lang
-    }, [])
+  //survey.locale = "es";
 
   useEffect(()=>{
-     survey.locale = lang
-   }, [lang])
-
-  useEffect(()=>{
-    console.log(lang)
-  }, [])
-
-
+    survey.locale = lang
+  }, [lang])
 
   const handleCompletion = (sender) => {
     let fixedData = sender.data

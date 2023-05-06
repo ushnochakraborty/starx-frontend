@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-var initialState = {
+const initialState = {
   value: "en",
 }
 
